@@ -5,8 +5,8 @@
       Water Bottle
       Other things
 
-   Students signed up for camp get 15% discount
+   Students signed up for camp get 15% discount (requires checking for login)
 
-   
+
 
  */
