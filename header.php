@@ -16,15 +16,19 @@
  <nav class="navbar navbar-default">
    <div class="container-fluid">
      <div class="navbar-header">
-       <a class="navbar-brand" href="">EduCamps</a>
-     </div>
-     <ul class="nav navbar-nav">
+       <a><img class="navbar-brand" src="logoEdu.png"style="height:30%; width:50%;"></img><
+       <a style="float:right; font-size: 20px;">| Login</a>
+       <div>
+         <a style="float:right; font-size: 20px;">Cart |</a>
+       </div>
+    </div>
+     <ul class="nav navbar-nav" style="float:right; font-size: 20px;">
        <li><a href="index.php">Home</a></li>
-       <li><a href="register.php">Schedule/Registration</a></li>
-       <li><a href="#">Catalogue</a></li>
+       <li><a href="register.php">Registration</a></li>
+       <li><a href="catalog.php">Catalog</a></li>
        <li><a href="#">Forum</a></li>
-       <li><a href="#">Visuals</a></li>
-       <li><a href="#">More Info</a></li>
+       <li><a href="#">Visualization</a></li>
+       <li><a href="#">Activity</a></li>
      </ul>
    </div>
  </nav>

@@ -69,7 +69,7 @@
      $special = $_POST["special"];
    }
  }
- 
+
  include 'header.php'
  ?>
  <!DOCTYPE html>
@@ -80,7 +80,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="style.css">
  </head>
- <body>
+ <body style= "background-color: #00CED1;">
    <div class="form-style-2">
    <div class="form-style-2-heading">Register your Child for $499</div>
    <form action="pay.php" method="post">
@@ -114,3 +114,6 @@
 
  </body>
  </html>
+ <?php
+ include 'footer.php'
+ ?>
