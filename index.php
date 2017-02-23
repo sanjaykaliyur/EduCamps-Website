@@ -33,7 +33,7 @@
      </div>
      <ul class="nav navbar-nav">
        <li class="active"><a href="#">Home</a></li>
-       <li><a href="scheduleRegistration.php">Schedule/Registration</a></li>
+       <li><a href="register.php">Schedule/Registration</a></li>
        <li><a href="#">Catalogue</a></li>
        <li><a href="#">Forum</a></li>
        <li><a href="#">Visuals</a></li>
