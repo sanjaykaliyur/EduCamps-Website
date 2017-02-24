@@ -16,7 +16,7 @@
  <nav class="navbar navbar-default">
    <div class="container-fluid">
      <div class="navbar-header">
-       <a><img class="navbar-brand" src="Images/Coen161project-logo-empty.png"style="height:30%; width:50%;"></img><
+       <a href="index.php"><img class="navbar-brand" src="Images/Coen161project-logo-empty.png"style="height:30%; width:50%;"></img></a>
        <a style="float:right; font-size: 20px;">| Login</a>
        <div>
          <a style="float:right; font-size: 20px;">Cart |</a>
