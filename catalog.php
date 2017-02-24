@@ -1,4 +1,4 @@
-/* Catalog
+<?php/* Catalog
 
    List of camp-related items
       Shirt
@@ -10,3 +10,5 @@
 
 
  */
+ include 'header.php'
+?>

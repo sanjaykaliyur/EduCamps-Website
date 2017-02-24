@@ -1,3 +1,4 @@
+<?php
 /* Home page
 
    Include:
@@ -14,3 +15,24 @@
 
 
  */
+include 'header.php';
+ ?>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <title>EduCamps</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body style= "background-color: #00CED1;">
+ <div id = "welcome" class="container">
+   <h3>Welcome to EduCamps</h3>
+   <p>A place where youth strive for greatness.</p>
+ </div>
+
+ </body>
+ </html>
+ <?php
+ include 'footer.php'
+ ?>
