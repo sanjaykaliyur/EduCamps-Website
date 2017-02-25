@@ -32,6 +32,7 @@ include 'header.php';
  </div>
 
  </body>
+ </style>
  </html>
  <?php
  include 'footer.php'
