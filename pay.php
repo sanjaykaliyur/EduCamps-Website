@@ -14,53 +14,6 @@ include 'header.php'
 
 </head>
 <body>
-<?php
-
-$childName = $childDOB =$parentName = $parentName = $parentEmail = $childGrade = "";
-$campDuration = $special = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["childName"])) {
-    $childName = "Child name is required";
-  } else {
-    $childName = $_POST["childName"];
-  }
-  // test last name
-  if (empty($_POST["childDOB"])) {
-    $childDOB = "Last name is required";
-  } else {
-    $childDOB = $_POST["childDOB"];
-  }
-  // test residence
-  if (empty($_POST["parentName"])) {
-    $parentName = "Parent's name is required";
-  } else {
-    $parentName = $_POST["parentName"];
-  }
-  if (empty($_POST["parentEmail"])) {
-    $parentEmail = "Parent's email is required";
-  } else {
-    $parentEmail = $_POST["parentEmail"];
-  }
-  // test language
-  if (empty($_POST["childGrade"])) {
-    $childGrade = "Child's grade is required";
-  } else {
-    $childGrade = $_POST["childGrade"];
-  }
-  // test skills
-  if (empty($_POST["campDuration"])) {
-    $campDuration = "Camp duration are required";
-  } else {
-    $campDuration = $_POST["campDuration"];
-  }
-  if (empty($_POST["special"])) {
-    $special = "Special instructions are required";
-  } else {
-    $special = $_POST["special"];
-  }
-}
-?>
 <div class="card-wrapper"></div>
   <div class="form-container active" style="text-align: center; padding-top: 10px;">
       <form action="">

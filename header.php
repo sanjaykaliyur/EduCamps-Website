@@ -27,7 +27,7 @@
        <li><a href="register.php">Registration</a></li>
        <li><a href="catalog.php">Catalog</a></li>
        <li><a href="#">Forum</a></li>
-       <li><a href="#">Visualization</a></li>
+       <li><a href="visualization.php">Visualization</a></li>
        <li><a href="#">Activity</a></li>
      </ul>
    </div>
