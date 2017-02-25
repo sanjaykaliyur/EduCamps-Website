@@ -90,7 +90,7 @@
      <label for="field2"><span>Date of Birth<span class="required">*</span></span><input id = "childDOB" type="text" class="input-field" name="field2" value="" /></label>
      <span class="error"> <?php echo $childDOB;?></span>
 
-     <label for="field1"><span>Parent name<span class="required">*</span></span><input id = "parentName"type="text" class="input-field" name="field1" value="" /></label>
+     <label for="field1"><span>Parent name<span class="required">*</span></span><input id = "parentName"type="text" class="input-field" name="field1" value=" " /></label>
      <span class="error"> <?php echo $parentName;?></span>
 
      <label for="field1"><span>Parent's Email<span class="required">*</span></span><input id = "parentEmail" type="text" class="input-field" name="field1" value="" /></label>
