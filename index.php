@@ -74,39 +74,42 @@ include 'header.php';
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Welcome to Modern Business
+                    Welcome to EduCamps!
                 </h1>
+                <p>
+                We are a group of highly skilled professionals in the fields of science and technology. We have come together to offer camps for young children to inspire them to pursue their interests. We offer a range of camps from athletics to programming.
+                </p>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7</h4>
+                        <h4><i class="fa fa-fw fa-check"></i> Sign up for Camp</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <p>View all of our camps and activities and sign up your child for camp. Registration is now OPEN!</p>
+                        <a href="register.php" class="btn btn-default">Register Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                        <h4><i class="fa fa-fw fa-gift"></i> Visit our Shop</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <p>Pick up some sweet EduCamps swag and proudly show your passion for science and technology.</p>
+                        <a href="catalog.php" class="btn btn-default">Catalog</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                        <h4><i class="fa fa-fw fa-compass"></i> Read What People Have to Say</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <p>See what former campers and their parents have to say about our camps.</p>
+                        <a href="forum.php" class="btn btn-default">Reviews</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +119,7 @@ include 'header.php';
         <!-- Portfolio Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Portfolio Heading</h2>
+                <h2 class="page-header">See what our kids have built!</h2>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
@@ -154,20 +157,17 @@ include 'header.php';
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Modern Business Features</h2>
+                <h2 class="page-header">Important Camp Information</h2>
             </div>
             <div class="col-md-6">
-                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <p>Our camps:</p>
                 <ul>
-                    <li><strong>Bootstrap v3.3.7</strong>
-                    </li>
-                    <li>jQuery v1.11.1</li>
-                    <li>Font Awesome v4.2.0</li>
-                    <li>Working PHP contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                    <li>17 HTML pages</li>
+                    <li>Begin June 19, 2017 and run through September 1, 2017</li>
+                    <li>Are available in 20 states across the United States</li>
+                    <li>Are appropriate for children between the ages of 8-14</li>
+                    <li>Are available for children of all skill levels</li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+                <p>To find out more details on our specific camps, visit our <a href="register.php">Registration</a> page.</p>
             </div>
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/700x450" alt="">
@@ -181,10 +181,10 @@ include 'header.php';
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                    <p>Have questions? Want someone to talk to? Our award-winning operators are always available to answer any and all questions you have about our camps. Your satisfaction is our top priority.</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="header.php">Call to Action</a>
+                    <a class="btn btn-lg btn-default btn-block" href="contact.html">Contact Us!</a>
                 </div>
             </div>
         </div>

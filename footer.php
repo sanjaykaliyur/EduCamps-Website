@@ -40,7 +40,7 @@
 <footer>
     <div class="footer">
         <div class="footer">
-            <p>Copyright &copy; Sanjay Kaliyur, Neil Prabhu, Alex Ripley, & Warren Tseng 2017</p>
+            <p>Copyright &copy; Sanjay Kaliyur, Neil Prabhu, Alex Ripley, &amp; Warren Tseng 2017</p>
         </div>
     </div>
 </footer>
