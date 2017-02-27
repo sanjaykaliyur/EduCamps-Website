@@ -34,13 +34,15 @@
   text-align: center;
   background:black;
   border-top: 1px solid #F2F2F2;
+  position:fixed;
+  bottom:0;
 }
 </style>
 
 <footer>
     <div class="footer">
         <div class="footer">
-            <p>Copyright &copy; Sanjay Kaliyur, Neil Prabhu, Alex Ripley, &amp; Warren Tseng 2017</p>
+            <center><p>Copyright &copy; Sanjay Kaliyur, Neil Prabhu, Alex Ripley, &amp; Warren Tseng 2017</p></center>
         </div>
     </div>
 </footer>

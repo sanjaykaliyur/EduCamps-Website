@@ -39,20 +39,20 @@ include 'header.php';
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill">
-                  <img class="logo" src="Images/stanford.jpg"></img>
+                  <center><img class="logo" src="Images/home-banner.png"></img></center>
                 </div>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
                 <div class="fill">
-                  <img class="camp1" src="Images/camp1.png"></img></div>
+                  <center><img class="camp1" src="Images/stanford.jpg"></img></div></center>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
               <div class="fill">
-                <img class="camp2" src="Images/camp2.png"></img></div>
+                <center><img class="camp2" src="Images/camp2.png"></img></div></center>
               <div class="carousel-caption">
                 </div>
             </div>
