@@ -35,17 +35,19 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.php">
-                  <img class="logo" src="Images/Coen161project-logo-empty.png"style="height:375%; width:50%;"></img>
+                  <img class="logo" src="Images/Coen161project-logo-empty.png"style="height:300%; width:35%;"></img>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="register.php">Registration</a></li>
                     <li><a href="catalog.php">Catalog</a></li>
-                    <li><a href="forum.php">Forum</a></li>
                     <li><a href="visualization.php">Visualization</a></li>
                     <li><a href="activity.php">Activity</a></li>
+                    <li><a href="forum.php">Reviews</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>

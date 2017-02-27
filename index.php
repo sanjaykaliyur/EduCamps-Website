@@ -39,7 +39,7 @@ include 'header.php';
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill">
-                  <img class="logo" src="Images/Coen161project-logo-white.png"></img>
+                  <img class="logo" src="Images/stanford.jpg"></img>
                 </div>
                 <div class="carousel-caption">
                 </div>
@@ -77,9 +77,12 @@ include 'header.php';
                     Welcome to EduCamps!
                 </h1>
                 <p>
-                We are a group of highly skilled professionals in the fields of science and technology. We have come together to offer camps for young children to inspire them to pursue their interests. We offer a range of camps from athletics to programming.
+                EduCamps run the highest quality educational camps for children in the United States. Our mission is to educate and enhance the knowledge of all our campers. Former members of our camp have gone on to excel in their school classes and attend some of the most presitigous universities in the world.</p>
+                <br>
+                <p>Our camps are run by a group of highly skilled professionals in the fields of science and technology. We have come together to offer camps for young children to inspire them to pursue their interests. We offer a range of camps from athletics to programming.
                 </p>
             </div>
+            <hr>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -162,7 +165,7 @@ include 'header.php';
             <div class="col-md-6">
                 <p>Our camps:</p>
                 <ul>
-                    <li>Begin June 19, 2017 and run through September 1, 2017</li>
+                    <li>Begin June 19, 2017 and run through August 18, 2017</li>
                     <li>Are available in 20 states across the United States</li>
                     <li>Are appropriate for children between the ages of 8-14</li>
                     <li>Are available for children of all skill levels</li>
@@ -170,7 +173,7 @@ include 'header.php';
                 <p>To find out more details on our specific camps, visit our <a href="register.php">Registration</a> page.</p>
             </div>
             <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+                <img class="img-responsive" src="Images/Coen161project-logo-empty.png" style="height=150%;width=200%;">
             </div>
         </div>
         <!-- /.row -->

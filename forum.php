@@ -1,7 +1,9 @@
 <?php include 'header.php'; ?>
 
 <div>
-	<h2> Welcome to the EduCamp forum! </h2>
+	<br>
+	<br>
+	<h2> Leave a Review </h2>
 </div>
 <form method="post" id="forum" style="margin:15px">
 	Title: <br>
