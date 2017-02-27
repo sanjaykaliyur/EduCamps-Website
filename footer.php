@@ -27,7 +27,7 @@
   width: 910px;
   font-size: 95%;
   padding: 20px 0;
-  text-align: left;
+  text-align: center;
   background: url(MarketPlace-images/footer-bottom.jpg) no-repeat center bottom;
 }
 #footer-wrap a {
@@ -67,11 +67,13 @@
 
 <!-- wrap starts here -->
 <div id="wrap">
+  <p style="text-align:center;margin:auto">
 
   <!-- footer starts -->
   <div id="footer-wrap"><div id="footer">
+    <p style="text-align:center;">
 
-      <p>
+
       &copy; 2017 EduCamps
 
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -79,13 +81,15 @@
       Created by <a href="http://www.styleshout.com/"></a>
       <a href="index.php"></a>
            <a href="register.php"></a>
-          Alex, Neil, Sanjay, Warren
+           <p style="color:blue;font-size:15px;text-align:center;">
+          Alex, Neil, Sanjay, Warren </p>
             <a href="http://validator.w3.org/check?uri=referer"></a>
       <a href="http://jigsaw.w3.org/css-validator/check/referer"></a>
       </p>
 
   </div></div>
   <!-- footer ends-->
+</p>
 
 <!-- wrap ends here -->
 </div>

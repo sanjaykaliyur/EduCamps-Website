@@ -28,7 +28,7 @@
        <li><a href="catalog.php">Catalog</a></li>
        <li><a href="forum.php">Forum</a></li>
        <li><a href="visualization.php">Visualization</a></li>
-       <li><a href="#">Activity</a></li>
+       <li><a href="activity.php">Activity</a></li>
      </ul>
    </div>
  </nav>
