@@ -25,7 +25,7 @@ include 'header.php'
       </form>
   </div>
 </body>
-<script src="card.js"></script>
+<script src="js/card.js"></script>
 <script>
   var card = new Card({
       form: 'form',
