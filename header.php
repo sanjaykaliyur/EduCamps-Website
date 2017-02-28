@@ -1,4 +1,11 @@
-
+<?php
+session_start();
+//Verify session
+  if(isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+  }
+?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +33,22 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div id="userCntrl" style="float:right;">
-              <button><a href="login.php">Sign-In</a></button>
-              <button><a href="cart.php">Cart</a></button>
+              <?php
+                if(isset($_SESSION['id'])){
+
+                  $sql = "select * FROM USER WHERE `Username` ='$id'";
+                  $result = mysqli_query($conn,$sql);
+                  $row = mysqli_fetch_assoc($result);
+                  echo '<button><a href="login.php">'.$row['Username'].'</a></button>';
+                  echo'<button><a href="cart.php">My Cart</a></button>';
+                }
+                else
+                {
+                  echo '
+                  <button><a href="login.php">Sign-In</a></button>
+                  <button><a href="cart.php">Cart</a></button>';
+                }
+               ?>
             </div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

@@ -18,18 +18,18 @@ if(isset($_SESSION['name'])) {
             <div class="col-md-8">
                 <h3>Sign in to continue</h3>
                 <br>
-                <form name="sentMessage" id="contactForm" method="POST" action="verify.php" novalidate>
+                <form method="POST" action="verify.php">
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Username:</label>
-                            <input type="text" class="form-control" name="name" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" name="user" required data-validation-required-message="Please enter your username.">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Password:</label>
-                            <input type="password" class="form-control" name="phone" required data-validation-required-message="Please enter your password">
+                            <input type="password" class="form-control" name="pass" required data-validation-required-message="Please enter your password">
                         </div>
                     </div>
                     <div id="success"></div>
