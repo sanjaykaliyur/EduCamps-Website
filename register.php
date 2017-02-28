@@ -60,6 +60,13 @@
              <p>This camp covers basic HTML, CSS, and Javascript.</p>
              <p>June 19, 2017 - July 7, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -79,6 +86,13 @@
              <p>This camp covers all the basic elements of Python.</p>
              <p>July 10, 2017 - July 28, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -98,6 +112,13 @@
              <p>This camp covers all the basic elements of Java.</p>
              <p>July 31, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -115,6 +136,13 @@
              <p>This introductory physics camp covers all the basics of Mechanics and includes laboratory work. Safety equipment included in price.</p>
              <p>June 19, 2017 - July 7, 2017</p>
              <p>Cost: $699</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -132,6 +160,13 @@
              <p>This introductory chemistry camp covers all the basics of chemistry and includes laboratory work. Safety equipment included in price.</p>
              <p>July 10, 2017 - July 28, 2017</p>
              <p>Cost: $699</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -149,6 +184,13 @@
              <p>This introductory biology camp covers all the basics of the biological world and includes laboratory work. Safety equipment included in price.</p>
              <p>July 31, 2017 - August 18, 2017</p>
              <p>Cost: $699</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -166,6 +208,13 @@
              <p>This introductory geometry camp covers all the material covered in high school geometry courses.</p>
              <p>June 19, 2017 - July 7, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -183,6 +232,13 @@
              <p>This introductory algebra camp covers all the material covered in high school Algebra 1 and Algebra 2 courses.</p>
              <p>July 10, 2017 - July 28, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -199,6 +255,13 @@
              <p>This introductory calculus camp covers all the material covered in a standard high school Calculus AB course.</p>
              <p>July 31, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -215,6 +278,13 @@
              <p>Swimming camp. Available for swimmers of all levels.</p>
              <p>June 19, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
@@ -231,6 +301,13 @@
              <p>Basketball camp. Open to campers of all levels.</p>
              <p>June 19, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
+             <p>Spots remaining: 50</p>
+             <p>Locations:
+                  <ul>
+                    <li>San Jose, CA</li>
+                    <li>Seattle, WA</li>
+                    <li>Austin, TX</li>
+             </p>
              <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
