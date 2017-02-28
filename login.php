@@ -1,6 +1,14 @@
 <?php include 'header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+//Verify session
+if(isset($_SESSION['name'])) {
+    header('Location: /index.php');
+    exit;
+}
+?>
 
 <body>
   <br>
@@ -10,24 +18,25 @@
             <div class="col-md-8">
                 <h3>Sign in to continue</h3>
                 <br>
-                <form name="sentMessage" id="contactForm" novalidate>
+                <form name="sentMessage" id="contactForm" method="POST" action="verify.php" novalidate>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Username:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" name="name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Password:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                            <input type="password" class="form-control" name="phone" required data-validation-required-message="Please enter your password">
                         </div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
                     <button type="submit" class="btn btn-primary">Log In</button>
                 </form>
+                <br><a type="button" href="createUser.php" class="btn btn-primary">Create Account</a><br>
             </div>
 
         </div>

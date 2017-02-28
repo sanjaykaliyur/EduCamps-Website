@@ -7,7 +7,7 @@
   <br>
   <br>
   <br>
-  <h2> Cart </h2>
+  <h2>Register</h2>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -16,8 +16,8 @@
   <br>
   <br>
   <div class="form-style-2">
-  <div class="form-style-2-heading"><strong>Register your Child for $499</strong></div>
-  <form action= "pay.php" method="post" style="padding-left: 20px;">
+  <div class="form-style-2-heading"></div>
+  <form action= "login.php" method="post" style="padding-left: 20px;">
     <label for="field1"><span>Child name<span class="required">*</span></span><input id = "childName" required data-validation-required-message="Child Name Required."/></label>
     <br>
     <br>
