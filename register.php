@@ -56,7 +56,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Introduction to Web Programming</a></h3>
+             <h3>Introduction to Web Programming</h3>
              <p>This camp covers basic HTML, CSS, and Javascript.</p>
              <p>June 19, 2017 - July 7, 2017</p>
              <p>Cost: $499</p>
@@ -75,7 +75,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Introduction to Python</a></h3>
+             <h3>Introduction to Python</h3>
              <p>This camp covers all the basic elements of Python.</p>
              <p>July 10, 2017 - July 28, 2017</p>
              <p>Cost: $499</p>
@@ -94,7 +94,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Introduction to Java</a></h3>
+             <h3>Introduction to Java</h3>
              <p>This camp covers all the basic elements of Java.</p>
              <p>July 31, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
@@ -111,7 +111,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Physics</a></h3>
+             <h3>Physics</h3>
              <p>This introductory physics camp covers all the basics of Mechanics and includes laboratory work. Safety equipment included in price.</p>
              <p>June 19, 2017 - July 7, 2017</p>
              <p>Cost: $699</p>
@@ -128,7 +128,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Chemistry</a></h3>
+             <h3>Chemistry</h3>
              <p>This introductory chemistry camp covers all the basics of chemistry and includes laboratory work. Safety equipment included in price.</p>
              <p>July 10, 2017 - July 28, 2017</p>
              <p>Cost: $699</p>
@@ -145,7 +145,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Biology</a></h3>
+             <h3>Biology</h3>
              <p>This introductory biology camp covers all the basics of the biological world and includes laboratory work. Safety equipment included in price.</p>
              <p>July 31, 2017 - August 18, 2017</p>
              <p>Cost: $699</p>
@@ -162,7 +162,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Geometry</a></h3>
+             <h3>Geometry</h3>
              <p>This introductory geometry camp covers all the material covered in high school geometry courses.</p>
              <p>June 19, 2017 - July 7, 2017</p>
              <p>Cost: $499</p>
@@ -179,7 +179,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Algebra</a></h3>
+             <h3>Algebra</h3>
              <p>This introductory algebra camp covers all the material covered in high school Algebra 1 and Algebra 2 courses.</p>
              <p>July 10, 2017 - July 28, 2017</p>
              <p>Cost: $499</p>
@@ -195,7 +195,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Calculus</a></h3>
+             <h3>Calculus</h3>
              <p>This introductory calculus camp covers all the material covered in a standard high school Calculus AB course.</p>
              <p>July 31, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
@@ -211,7 +211,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Swimming</a></h3>
+             <h3>Swimming</h3>
              <p>Swimming camp. Available for swimmers of all levels.</p>
              <p>June 19, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>
@@ -227,7 +227,7 @@
              </a>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Basketball</a></h3>
+             <h3>Basketball</h3>
              <p>Basketball camp. Open to campers of all levels.</p>
              <p>June 19, 2017 - August 18, 2017</p>
              <p>Cost: $499</p>

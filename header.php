@@ -29,7 +29,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div id="userCntrl" style="float:right;">
               <button><a href="login.php">Sign-In</a></button>
-              <button><a href=#>Cart</a></button>
+              <button><a href="cart.php">Cart</a></button>
             </div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

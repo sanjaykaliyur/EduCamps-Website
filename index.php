@@ -125,34 +125,22 @@ include 'header.php';
                 <h2 class="page-header">See what our kids have built!</h2>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+                    <img class="img-responsive img-portfolio img-hover" src="Images/tesla.jpg" style="height:250px;width:700px;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+                    <img class="img-responsive img-portfolio img-hover" src="Images/rocket.jpg" style="height:250px;width:700px;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+                    <img class="img-responsive img-portfolio img-hover" src="Images/engine.jpg" style="height:250px;width:700px;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+                    <img class="img-responsive img-portfolio img-hover" src="Images/iss.jpg" style="height:250px;width:700px;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+                    <img class="img-responsive img-portfolio img-hover" src="Images/rocket1.png" style="height:250px;width:700px;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+                    <img class="img-responsive img-portfolio img-hover" src="Images/truck.jpg" style="height:250px;width:700px;">
             </div>
         </div>
         <!-- /.row -->

@@ -35,14 +35,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+             <center><a>
+                 <img class="img-responsive img-hover" src="Images/Catalog/hoodieEDU.png" style="height:300px;widht:400px;" alt="">
+             </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Hoodie</a></h3>
+             <h3>Hoodie</h3>
              <p>High quality hoodie. Featuring our magical size-adaptible cotton designed by our expert camp leaders. One size fits all. </p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
      <!-- /.row -->
@@ -52,14 +52,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+           <center><a>
+               <img class="img-responsive img-hover" src="Images/Catalog/shirtsEDU.png" style="height:300px;widht:400px;" alt="">
+           </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">T-shirt</a></h3>
+             <h3>T-shirt</h3>
              <p>High quality T-shirt. Featuring our magical size-adaptible cotton designed by our expert camp leaders. One size fits all.</p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
      <!-- /.row -->
@@ -69,14 +69,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+           <center><a>
+               <img class="img-responsive img-hover" src="Images/Catalog/beanieEDU.png" style="height:300px;widht:400px;" alt="">
+           </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Beanie</a></h3>
+             <h3>Beanie</h3>
              <p>Crafted with technologically advanced wool taken from in-house cloned sheep. </p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
      <!-- /.row -->
@@ -86,14 +86,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+           <center><a>
+               <img class="img-responsive img-hover" src="Images/Catalog/hatEDU.png" style="height:300px;widht:400px;" alt="">
+           </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Hat</a></h3>
+             <h3>Hat</h3>
              <p>Lorem ipsum dolor sit amet</p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
      <!-- /.row -->
@@ -103,14 +103,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+           <center><a>
+               <img class="img-responsive img-hover" src="Images/Catalog/waterbottleEDU.png" style="height:300px;widht:400px;" alt="">
+           </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Water Bottle</a></h3>
+             <h3>Water Bottle</h3>
              <p>Lorem ipsum dolor sit amet, </p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
      <!-- /.row -->
@@ -120,14 +120,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+           <center><a>
+               <img class="img-responsive img-hover" src="Images/Catalog/ballEDU.png" style="height:300px;widht:400px;" alt="">
+           </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Aerobic Ball</a></h3>
+             <h3>Aerobic Ball</h3>
              <p>Lorem ipsum dolor sit amet,</p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
      <!-- /.row -->
@@ -137,14 +137,14 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+           <center><a>
+               <img class="img-responsive img-hover" src="Images/Catalog/booksEDU.png" style="height:300px;widht:400px;" alt="">
+           </a></center>
          </div>
          <div class="col-md-6">
-             <h3><a href="blog-post.html">Notebook</a></h3>
+             <h3>Notebook</h3>
              <p>Lorem ipsum dolor sit amet</p>
-             <a class="btn btn-primary" href="blog-post.html">Add to Cart <i class="fa fa-angle-right"></i></a>
+             <a class="btn btn-primary" href="cart.php">Add to Cart <i class="fa fa-angle-right"></i></a>
          </div>
      </div>
     </div>

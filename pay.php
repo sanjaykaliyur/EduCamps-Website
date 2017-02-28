@@ -4,6 +4,8 @@ include 'header.php'
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <br>
+  <br>
   <title>EduCamps</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +16,13 @@ include 'header.php'
 
 </head>
 <body>
+  <br>
+  <br>
+  <br>
+  <br>
 <div class="card-wrapper"></div>
+  <br>
+  <br>
   <div class="form-container active" style="text-align: center; padding-top: 10px;">
       <form action="">
           <input placeholder="Card number" type="tel" name="number">

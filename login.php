@@ -8,7 +8,7 @@
   <br>
         <div class="row">
             <div class="col-md-8">
-                <h3>Sing in to continue</h3>
+                <h3>Sign in to continue</h3>
                 <br>
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">
