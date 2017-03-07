@@ -41,7 +41,7 @@
 
      <div class="row">
          <div class="col-lg-12">
-             <h1 class="page-header">Catalog
+             <h1 class="page-header">Courses
                  <small>EduCamps Programs</small>
              </h1>
          </div>
@@ -51,9 +51,7 @@
      <!-- Blog Post Row -->
      <div class="row">
          <div class="col-md-5">
-             <a href="blog-post.html">
-                 <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-             </a>
+                 <img class="img-responsive img-hover" src="Images/CatalogPictures/ballEDU.png" style="height:300px;widht:400px;" alt="">
          </div>
          <div class="col-md-6">
              <h3>Introduction to Web Programming</h3>
