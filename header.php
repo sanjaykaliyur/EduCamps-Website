@@ -67,9 +67,10 @@ session_start();
                     <li><a href="index.php">Home</a></li>
                     <li><a href="register.php">Registration</a></li>
                     <li><a href="catalog.php">Catalog</a></li>
+                    <li><a href="forum.php">Reviews</a></li>
+                    <li><a href="memories.php">Memories</a></li>
                     <li><a href="visualization.php">Visualization</a></li>
                     <li><a href="activity.php">Activity</a></li>
-                    <li><a href="forum.php">Reviews</a></li>
                     <li><a href="faq.php">FAQ</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
