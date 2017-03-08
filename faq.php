@@ -67,6 +67,55 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Are meals provided at camp?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Meals are not provided at Educamps. This means you should send your student to camp with a bag lunch for the day. Snacks and juice will be provided.
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">What if my child has allergies?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                We take allergies very seriously at Educamps, and will request you list any allergies when <a href="register.php">registering</a> for camp. We will then consider our campers' allergies when choosing snacks for a given session.
+                            </div>
+                        </div>
+                    </div>
+                         <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">What if my child gets hurt?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                We provide a very safe environment for our campers and are prepared and certified to assist in case of injury. All staff members are first-aid and CPR certified. We immediately notify parents in cases of injury, and are prepared to call 911 in more serious cases.
+                            </div>
+                        </div>
+                    </div>
+                        <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">How do I know your staff is trustworthy?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseEight" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Our staff goes through multiple stages in the interview process, including background checks and reference checks. They receive a full week of training before camp, and we pride ourselves in knowing who our staff truly is.
+                            </div>
+                        </div>
                 </div>
                 <!-- /.panel-group -->
             </div>
