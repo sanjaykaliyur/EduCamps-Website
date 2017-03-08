@@ -45,9 +45,12 @@
 			$_SESSION['id']=$username;
 			echo '<script>location.href="login_confirm.php"</script>';
 		}else{
-			echo '<script>location.href="login.php"</script>';
+			echo '<script>location.href="login_fail.php"</script>';
 		}
-  }
+	}
+	else{
+		echo '<script>location.href="login_fail2.php"</script>';
+	}
 }
 
 ?>
