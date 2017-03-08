@@ -154,7 +154,7 @@ include 'header.php';
                 <p>Our camps:</p>
                 <ul>
                     <li>Begin June 19, 2017 and run through August 18, 2017</li>
-                    <li>Are available in 20 states across the United States</li>
+                    <li>Are available in several states across the United States</li>
                     <li>Are appropriate for children between the ages of 8-14</li>
                     <li>Are available for children of all skill levels</li>
                 </ul>

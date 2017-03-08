@@ -73,7 +73,7 @@ var Game = function(element, template){
   }
 
   this.start = function(){
-    this.hideMenu();
+    //this.hideMenu();
     this.init();
     // console.log('Starting Game');
     $('#game tr td').attr('class', '');
@@ -98,7 +98,7 @@ var Game = function(element, template){
   }
 
   this.restart = function(){
-    clearInterval( this.timerHandle );
+    //clearInterval( this.timerHandle );
     this.start();
   }
 
