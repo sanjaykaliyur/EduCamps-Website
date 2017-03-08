@@ -1,6 +1,7 @@
 <?php include 'header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <?php
 session_start();
 //Verify session

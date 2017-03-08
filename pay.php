@@ -20,16 +20,17 @@ include 'header.php'
   <br>
   <br>
   <br>
+  <h2 style = "text-align: center;"> Total: $<?php echo $_POST['totalPrice'];?>.00</h2>
 <div class="card-wrapper"></div>
   <br>
   <br>
   <div class="form-container active" style="text-align: center; padding-top: 10px;">
-      <form action="">
-          <input placeholder="Card number" type="tel" name="number">
-          <input placeholder="Full name" type="text" name="name">
-          <input placeholder="MM/YY" type="tel" name="expiry">
-          <input placeholder="CVC" type="number" name="cvc"><br><br>
-          <button type="submit">Pay</button>
+      <form action="pay_confirm.php">
+          <input placeholder="Card number" type="tel" name="number" required data-validation-required-message="Card Number Required.">
+          <input placeholder="Full name" type="text" name="name" required data-validation-required-message="Name Required.">
+          <input placeholder="MM/YY" type="tel" name="expiry" required data-validation-required-message="Expiration Date Required.">
+          <input placeholder="CVC" type="number" name="cvc" required data-validation-required-message="CVC Required."><br><br>
+          <button type="submit" class="btn btn-success btn-block">$ Pay</button>
       </form>
   </div>
 </body>
@@ -41,6 +42,3 @@ include 'header.php'
   });
 </script>
 </html>
-<?php
-include 'footer.php'
-?>

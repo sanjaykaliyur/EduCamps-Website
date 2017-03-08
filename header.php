@@ -1,9 +1,10 @@
 <?php
-session_start();
 //Verify session
+session_start();
   if(isset($_SESSION['id'])) {
     $id = $_SESSION['id'];
   }
+  include 'connect.php';
 ?>
 ?>
 <!DOCTYPE html>
@@ -35,18 +36,21 @@ session_start();
             <div id="userCntrl" style="float:right;">
               <?php
                 if(isset($_SESSION['id'])){
-
-                  $sql = "select * FROM USER WHERE `Username` ='$id'";
+                  $sql = "select * FROM USERS WHERE `Username` ='$id'";
                   $result = mysqli_query($conn,$sql);
                   $row = mysqli_fetch_assoc($result);
-                  echo '<button><a href="login.php">'.$row['Username'].'</a></button>';
-                  echo'<button><a href="cart.php">My Cart</a></button>';
+                  echo '<div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Welcome '.$row['Username'].'</button>
+                        <ul class="dropdown-menu">
+                          <li><a href="myAccount.php">My Account</a></li>
+                          <li><a href="added_to_cart.php">Cart</a></li>
+                          <li><a href="logout.php">Logout</a></li>
+                        </ul>
+                      </div>';
                 }
                 else
                 {
-                  echo '
-                  <button><a href="login.php">Sign-In</a></button>
-                  <button><a href="cart.php">Cart</a></button>';
+                  echo '<button><a href="login.php">Sign-In</a></button>';
                 }
                ?>
             </div>
@@ -58,21 +62,21 @@ session_start();
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.php">
-                  <img class="logo" src="Images/Coen161project-logo-empty.png"style="height:300%; width:35%;"></img>
+                  <img class="logo" src="Images/Coen161project-logo-empty.png"style="height:500%; width:30%; padding-bottom: 20px;"></img>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="register.php">Registration</a></li>
-                    <li><a href="catalog.php">Catalog</a></li>
+                    <li><a href="register2.php">Registration</a></li>
+                    <li><a href="catalog2.php">Catalog</a></li>
                     <li><a href="visualization.php">Visualization</a></li>
                     <li><a href="activity.php">Activity</a></li>
                     <li><a href="forum.php">Reviews</a></li>
                     <li><a href="faq.php">FAQ</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                </ul>
+                  </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>

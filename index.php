@@ -175,7 +175,7 @@ include 'header.php';
                     <p>Have questions? Want someone to talk to? Our award-winning operators are always available to answer any and all questions you have about our camps. Your satisfaction is our top priority.</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="contact.html">Contact Us!</a>
+                    <a class="btn btn-lg btn-default btn-block" href="contact.php">Contact Us!</a>
                 </div>
             </div>
         </div>
