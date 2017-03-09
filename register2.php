@@ -55,18 +55,18 @@
 //'.$counter.'
      while($row = mysqli_fetch_assoc($result)) {
        echo ' <div class="row">
-                <div class="col-md-5">
-                    <a href="blog-post.html">
-                        <img class="img-responsive img-hover" src="http://placehold.it/600x300" alt="">
-                    </a>
-                </div>
+               <div class="col-md-5">
+                   <center><a>
+                       <img class="img-responsive img-hover" src="http://static.kinfosystem.com/images/slider/web-program.png" style="height:300px;widht:400px;" alt="">
+                   </a></center>
+               </div>
                 <form method="post" action="added_to_cart.php">
                 <div class="col-md-6">
                       <h3 name="course">'.$row['course_name'].'</h3>
                       <p>'.$row['description'].'</p>
                       <p>'.$row['date'].'</p>
                       <p class = "sameLine">Cost: $<p class = "sameLine" name = "cost">'.$row['cost'].'</p></p>
-                      <p class = "sameLine">Spots remaining: <p class = "sameLine" name = "spots">'.$row['spots'].'</p></p>
+                      <p class = "sameLine">Spots remaining: <p class = "sameLine" name = "spots"><b>'.$row['spots'].'</b></p></p>
                       <input type="hidden" name="spots" value="'.$row['spots'].'"></input>
                       <input type="hidden" name="cost" value="'.$row['cost'].'"></input>
                       <input type="hidden" name="course" value="'.$row['course_name'].'"></input>

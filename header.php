@@ -6,7 +6,6 @@ session_start();
   }
   include 'connect.php';
 ?>
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,7 +72,7 @@ session_start();
                     <li><a href="catalog2.php">Catalog</a></li>
                     <li><a href="forum.php">Reviews</a></li>
                     <li><a href="memories.php">Memories</a></li>
-                    <li><a href="visualization.php">Visualization</a></li>
+                    <li><a href="visualization2.php">Visualization</a></li>
                     <li><a href="activity.php">Activity</a></li>
                     <li><a href="faq.php">FAQ</a></li>
                     <li><a href="contact.php">Contact</a></li>

@@ -1,3 +1,4 @@
+<script>
 var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
         window.setTimeout(callback, 1000 / 60)
     };
@@ -168,3 +169,4 @@ window.addEventListener("keydown", function (event) {
 window.addEventListener("keyup", function (event) {
     delete keysDown[event.keyCode];
 });
+</script>

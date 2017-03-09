@@ -16,7 +16,7 @@ if(isset($_SESSION['name'])) {
   <br>
         <div class="row">
             <div class="col-md-8">
-                <h3>Login failed. Username does not exist!</h3>
+                <h3>Login failed: Username does not exist!</h3>
                 <br>
                 <form method="POST" action="verify.php">
                     <div class="control-group form-group">
