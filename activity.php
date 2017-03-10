@@ -6,21 +6,27 @@
     <br>
     <br>
     <br>
+    <h2> Games Our Campers Have Built </h2>
     <br>
     <br>
-    <link rel="stylesheet" href="TicTacToe/style.css" type="text/css">
-    <script src="TicTacToe/jquery.min.js"></script>
-    <script src="TicTacToe/sugar-1.2.5.min.js"></script>
-    <script type="text/javascript" src="TicTacToe/game.js"></script>
+    <link rel="stylesheet" href="Games/style.css" type="text/css">
+    <script src="Games/jquery.min.js"></script>
+    <script src="Games/sugar-1.2.5.min.js"></script>
+    <script type="text/javascript" src="Games/pong.js"></script>
+    <script type="text/javascript" src="Games/tic.js"></script>
   </head>
   <body class="theme-01">
-    <h1>Tic Tac Toe</h1>
 
     <div id="game-container"></div>
 
     <script type="text/x-template" id="game-template">
     <div id="menu-container">
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <ul id="menu" class="hidden">
         <li id="time">Moves:</li>
         <li id="status">Player X Wins!</li>

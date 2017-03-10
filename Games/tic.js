@@ -1,6 +1,3 @@
-//
-// Document Ready, Let's Play
-//
 $(function() {
 
   new Game('#game-container', '#game-template')
