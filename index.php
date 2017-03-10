@@ -39,7 +39,7 @@ include 'header.php';
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill">
-                  <center><img class="logo" src="Images/home-banner.png"></img></center>
+                  <center><img class="logo" src="Images/home-banner.png" style:"width: 100%;"></img></center>
                 </div>
                 <div class="carousel-caption">
                 </div>

@@ -6,6 +6,12 @@ $Start_Date = date("Y-m-d");
     $comment = $_POST['comment'];
     $sql = "INSERT INTO `FORUM`(`Username`, `entryDate`, `response`, `campName`) VALUES ('$id','$Start_Date','$comment','$camp');";
     $result = mysqli_query($conn,$sql);
+    if($result){
+      echo 'yay';
+    }
+    else{
+      echo 'fuck';
+    }
   }
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 

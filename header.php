@@ -28,12 +28,28 @@ session_start();
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <style>
+
+    #userCntrl {
+      float:right;
+    }
+
+    #logo {
+      height:500%;
+      width:25%;
+      padding-bottom: 15px;
+      float: left;
+    }
+    #navb {
+      padding-right: 20px;
+    }
+    </style>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navb" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div id="userCntrl" style="float:right;">
+            <div id="userCntrl">
               <?php
                 if(isset($_SESSION['id'])){
                   $sql = "select * FROM USERS WHERE `Username` ='$id'";
@@ -55,14 +71,9 @@ session_start();
                ?>
             </div>
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+
                 <a class="navbar-brand" href="index.php">
-                  <img class="logo" src="Images/Coen161project-logo-empty.png"style="height:500%; width:30%; padding-bottom: 20px;"></img>
+                  <img class="logo" id = "logo" src="Images/Coen161project-logo-empty.png"></img>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->

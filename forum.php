@@ -61,31 +61,32 @@
 						<?php
 							$sql = "SELECT * FROM FORUM;";
 							$result = mysqli_query($conn,$sql);
-				 			$row = mysqli_fetch_assoc($result);
-							if($row != 0) {
-							echo '<div class="col-md-4">
-	                <div class="panel panel-default">
-	                    <div class="panel-heading">
-	                        <h4><strong>'.$row['Username'].'</strong> on '.$row['entryDate'].'</h4>
-	                    </div>
-	                    <div class="panel-body">
-												<h4> '.$row['campName'].'</h4>
-	                        <p>'.$row['response'].'</p>
-	                    </div>
-	                </div>
-	            </div>';
-						}
+				 			while($row = mysqli_fetch_assoc($result)) {
+  							if($row != 0) {
+    							echo '<div class="col-md-4">
+    	                <div class="panel panel-default">
+    	                    <div class="panel-heading">
+    	                        <h4><strong>'.$row['Username'].'</strong> on '.$row['entryDate'].'</h4>
+    	                    </div>
+    	                    <div class="panel-body">
+    												<h4> '.$row['campName'].'</h4>
+    	                        <p>'.$row['response'].'</p>
+    	                    </div>
+    	                </div>
+    	            </div>';
+    						}
+              }
 						 ?>
         </div>
 
 <div>
             <br>
             <br>
-            <h3> Leave a Review </h3>
 </div>
 <?php
 if(isset($_SESSION['id'])) {
-	echo '<form method="post" id="forum" style="margin:15px" action = "forum_add.php">
+	echo '<h3> Leave a Review </h3>
+  <form method="post" id="forum" style="margin:15px" action = "forum_add.php">
             Camp Name: <br>
 						<select name = "campName"required data-validation-required-message="select a camp name">
 							<option selected="selected" value="">Camp Name</option>
