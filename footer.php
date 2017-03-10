@@ -13,15 +13,17 @@
 
     <title>EduCamps</title>
 
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS >
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <Custom CSS >
     <link href="css/modern-business.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    < Custom Fonts>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"-->
 
+    <!-- Bootstrap Core JS -->
+    
 </head>
 
 <style type='text/css'>

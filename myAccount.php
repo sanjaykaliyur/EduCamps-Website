@@ -8,13 +8,19 @@ include 'header.php';
 <?php
 echo '<div id="accountWrapper" style="padding-left: 10px;">';
   $sql = "SELECT * FROM USER_CAMPS WHERE Username = '$id';";
+  $sql1 = "SELECT * FROM USERS WHERE Username = '$id';";
   $sql2 = "SELECT * FROM USER_ITEMS WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
+  $result1 = mysqli_query($conn,$sql1);
+  $row1 = mysqli_fetch_assoc($result1);
   $result2 = mysqli_query($conn,$sql2);
 
   echo '<h3>My courses:</h3>';
   while($row = mysqli_fetch_assoc($result)) {
-    echo '<hr><p>'.$row['Camp'].'</p><hr>';
+    echo '<hr><p><h2>'.$row['Camp'].'</h2></p>';
+    echo '<p>Child: '.$row1['childName'].'</p>';
+    echo '<p>Duration: '.$row['duration'].'</p>';
+    echo '<p>Date Period '.$row['date'].'</p><hr>';
   }
   echo '<br>
         <h3> My items:</h3>';

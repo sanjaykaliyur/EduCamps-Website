@@ -34,6 +34,23 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="style.css">
  </head>
+ <script
+src="https://code.jquery.com/jquery-3.1.1.js"
+integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+crossorigin="anonymous"></script>
+ <script>
+   var week1 = '<option selected="selected" value=""> Dates </option><option value="06/19/17 - 06/26/17">06/19/17 - 06/26/17</option><option value="06/26/17 - 07/03/17">06/26/17 - 07/03/17</option><option value="07/03/17 - 07/10/17">07/03/17 - 07/10/17</option><option value="07/10/17 - 07/17/17">07/10/17 - 07/17/17</option><option value="07/17/17 - 07/24/17">07/17/17 - 07/24/17</option><option value="07/24/17 - 07/31/17">07/24/17 - 07/31/17</option><option value="07/31/17 - 08/07/17">07/31/17 - 08/07/17</option><option value="08/07/17 - 08/14/17">08/07/17 - 08/14/17</option><option value="08/14/17 - 08/18/17">08/14/17 - 08/18/17</option>';
+   var week2 = '<option selected="selected" value=""> Dates </option><option value="06/19/17 - 07/03/17">06/19/17 - 07/03/17</option><option value="07/03/17 - 07/17/17 ">   07/03/17 - 07/17/17 </option><option value="07/17/17 - 07/31/17">07/17/17 - 07/31/17</option><option value="07/31/17 - 08/14/17">07/31/17 - 08/14/17</option>';
+  $(document).ready(function(){
+    $("select#select_1").on('change',function(){
+        if($(this).val()=="1 week"){
+            $("select#select_2").html(week1);
+        }else if($(this).val()=="2 weeks"){
+            $("select#select_2").html(week2);
+        }
+    });
+  });
+ </script>
  <style>
  .sameLine {
    display: inline;
@@ -65,11 +82,11 @@
                       <h3 name="course">'.$row['course_name'].'</h3>
                       <p>'.$row['description'].'</p>
                       <p>'.$row['date'].'</p>
-                      <p class = "sameLine">Cost: $<p class = "sameLine" name = "cost">'.$row['cost'].'</p></p>
+                      <p class = "sameLine">Cost: $<p class = "sameLine" name = "cost">'.$row['cost'].' (one week)</p></p>
                       <p class = "sameLine">Spots remaining: <p class = "sameLine" name = "spots"><b>'.$row['spots'].'</b></p></p>
                       <input type="hidden" name="spots" value="'.$row['spots'].'"></input>
                       <input type="hidden" name="cost" value="'.$row['cost'].'"></input>
-                      <input type="hidden" name="course" value="'.$row['course_name'].'"></input>
+                      <input type="hidden" name="courseName" value="'.$row['course_name'].'"></input>
                       <input type="hidden" name="courseID" value="'.$row['course_ID'].'"></input>
                       <p>Locations:
                            <ul>
@@ -77,8 +94,23 @@
                              <li>Seattle, WA</li>
                              <li>Austin, TX</li>
                       </p>
-                    <button class="btn btn-primary" type="submit">Add to Cart<i class="fa fa-angle-right"></i></button>
-                </div>
+                      <div id="dates" style="float: right;">
+                        <select name = "duration" id="select_1" required data-validation-required-message="select a duration">
+                          <option selected="selected" value="">Duration</option>
+                          <option value="1 week">1 week</option>
+                          <option value="2 weeks">2 weeks</option>
+                        </select>
+                        <br>
+                        <select name = "date" id="select_2" required data-validation-required-message="select a date">
+                          <option selected="selected" value="">Dates</option>
+                        </select>
+                      </div>';
+                      if($row['spots'] != 0)
+                        echo '<button class="btn btn-primary" type="submit">Add to Cart<i class="fa fa-angle-right"></i></button>';
+                      else {
+                        echo '<p><b>Course is full!</b></p>';
+                      }
+              echo'</div>
               </form>
             </div>
             <hr>';

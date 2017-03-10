@@ -11,7 +11,7 @@ include 'header.php';
 </head>
 <html>
   <body>
-    <canvas id="canvas" width="800" height="800" style="padding-top: 100px; margin: auto;"></canvas>
+    <canvas id="canvas" width="900" height="800" style="padding-top: 100px; margin: auto;"></canvas>
     <script>
       $.ajax({
         type: 'POST',
