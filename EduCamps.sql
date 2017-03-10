@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 10, 2017 at 06:22 AM
+-- Generation Time: Mar 10, 2017 at 06:44 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -70,14 +70,14 @@ CREATE TABLE `COURSES` (
 
 INSERT INTO `COURSES` (`course_ID`, `course_name`, `cost`, `spots`, `image`, `description`, `date`) VALUES
 (1, 'Introduction to Web Programming', 499, 49, '', 'This camp covers basic HTML, CSS, and Javascript.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(2, 'Intro to Python', 499, 50, '', 'This camp covers all the basic elements of Python.\r\n\r\n', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(2, 'Introduction to Python', 499, 50, '', 'This camp covers all the basic elements of Python.\r\n\r\n', '8 wks. long (June 19, 2017 - August 18, 2017)'),
 (3, 'Introduction to Java', 499, 50, '', 'This camp covers all the basic elements of Java.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(4, 'Physics', 699, 50, '', 'This introductory physics camp covers all the basics of Mechanics and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(5, 'Chemistry', 699, 50, '', 'This introductory chemistry camp covers all the basics of chemistry and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(6, 'Biology', 699, 50, '', 'This introductory biology camp covers all the basics of the biological world and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(7, 'Geometry', 499, 50, '', 'This introductory geometry camp covers all the material covered in high school geometry courses.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(8, 'Algebra', 499, 50, '', 'This introductory algebra camp covers all the material covered in high school Algebra 1 and Algebra 2 courses.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(9, 'Calculus', 499, 50, '', 'This introductory calculus camp covers all the material covered in a standard high school Calculus AB course.', '8 wks. long (June 19, 2017 - August 18, 2017)');
+(4, 'Introduction to Robotics', 699, 50, '', 'This introductory physics camp covers all the basics of Mechanics and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(5, 'Electrical Engineering: Circuits', 699, 50, '', 'This introductory chemistry camp covers all the basics of chemistry and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(6, 'Electrical Engineering: Logic Design', 699, 50, '', 'This introductory biology camp covers all the basics of the biological world and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(7, 'Basketball', 499, 50, '', 'This introductory geometry camp covers all the material covered in high school geometry courses.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(8, 'Football', 499, 50, '', 'This introductory algebra camp covers all the material covered in high school Algebra 1 and Algebra 2 courses.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(9, 'Swimming', 499, 50, '', 'This introductory calculus camp covers all the material covered in a standard high school Calculus AB course.', '8 wks. long (June 19, 2017 - August 18, 2017)');
 
 -- --------------------------------------------------------
 

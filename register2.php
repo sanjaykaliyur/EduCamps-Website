@@ -60,7 +60,7 @@ crossorigin="anonymous"></script>
    <div class="container">
      <div class="row">
          <div class="col-lg-12">
-             <h1 class="page-header">Camps
+             <h1 class="page-header" style="padding-top: 10px;">Camps
                  <small>EduCamps Programs</small>
              </h1>
          </div>
@@ -71,12 +71,25 @@ crossorigin="anonymous"></script>
      $counter = 0;
 //'.$counter.'
      while($row = mysqli_fetch_assoc($result)) {
+       if($counter == 0)
+       {
+         echo '<h1 style= "color: #4286f4">Computer Courses</h1>';
+       }
+       else if($counter == 3)
+       {
+         echo '<h1 style= "color: #a641f4">Robotics Courses</h1>';
+       }
+       else if($counter == 6)
+       {
+         echo '<h1 style= "color: #3dbc23">Outdoors</h1>';
+       }
        echo ' <div class="row">
                <div class="col-md-5">
                    <center><a>
                        <img class="img-responsive img-hover" src="http://static.kinfosystem.com/images/slider/web-program.png" style="height:300px;widht:400px;" alt="">
                    </a></center>
-               </div>
+               </div>';
+               echo'
                 <form method="post" action="added_to_cart.php">
                 <div class="col-md-6">
                       <h3 name="course">'.$row['course_name'].'</h3>
