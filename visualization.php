@@ -1,16 +1,7 @@
 <?php include 'header.php'; ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
 <html>
-<<<<<<< HEAD
-  <head>
-  </head>
-  <body>
-  </body>
-  <br>
-  <br>
-
-</html>
-=======
   <center>
   <head></head>
   <body>
@@ -95,8 +86,10 @@
         echo "<rect id='eleven' x='300' y='460' rx='2' ry='2' height='15px' width='1px'></rect>";
         echo "<rect id='twelve' x='300' y='500' rx='2' ry='2' height='15px' width='30px'></rect>";
     </div>
+  </svg>
+  <br /><br /><br />
     <p>Note: Tennis classes no longer offered.</p>
-  </body></svg></center>
+  </body>
 </html>
 
 <? include 'footer.php'; ?>

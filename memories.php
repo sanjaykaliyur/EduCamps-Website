@@ -15,7 +15,11 @@ $max_file_size = 30000; // size in bytes
 // now echo the html page
 ?>
 <html lang="en">
+<head>
+</head>
+<body>
 
+<<<<<<< HEAD
     <head>
         <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
 
@@ -53,5 +57,10 @@ $max_file_size = 30000; // size in bytes
 
 </html>
 
+=======
+</body>
+>>>>>>> origin/version2
 </html>
+
+
 <?php include 'footer.php' ?>

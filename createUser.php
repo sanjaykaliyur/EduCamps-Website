@@ -24,7 +24,7 @@
     <label for="field1"><span>Password<span class="required">*</span></span><input name = "password" type = "password" required data-validation-required-message="Password is required."/></label>
     <br>
     <br>
-    <label for="field1"><span>Child name<span class="required">*</span></span><input id = "childName" required data-validation-required-message="Child Name Required."/></label>
+    <label for="field1"><span>Child name<span class="required">*</span></span><input name ="childName"  required data-validation-required-message="Child Name Required."/></label>
     <br>
     <br>
     <label for="field2"><span>Date of Birth<span class="required">*</span></span><input id = "childDOB" type="date" class="input-field" name="field2" value="" required data-validation-required-message="Date Of Birth Required" /></label>
@@ -44,12 +44,12 @@
       <option value="Advertise">7th grade</option>
       <option value="Partnership">8th grade</option>
     </select></label>
-    <br>
+    <!--br>
     <br>
     <label for="field5"><span>Camp Duration*</span><br><select id = "campDuration" name="field4" class="select-field" required data-validation-required-message="Camp Duration Required.">
       <option>1 week</option>
       <option>2 weeks</option>
-    </select></label>
+    </select></label-->
     <br>
     <br>
     <label for="field5"><span>Address<span class="required">*</span></span><br><textarea id="address" name="address" class="textarea-field" placeholder='Street, State, and ZIP code' required data-validation-required-message="Please enter address."></textarea></label>

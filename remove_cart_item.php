@@ -10,6 +10,8 @@
   {
     // if courses then split the sql result
     $courseID = $_POST['courseID'];
+    $courseCost = $_POST['courseCost'];
+    $courseDur = $_POST['courseDuration'];
     $array = str_split($row['courses_cart']);
     // search the splitted SQL result and search for the courseID posted
     $key = array_search($courseID,$array);
@@ -20,6 +22,9 @@
     $newA = implode($newArray);
     $sql1 = "UPDATE USERS SET courses_cart = '$newA' WHERE Username = '$id';";
     $result1 = mysqli_query($conn,$sql1);
+
+    $sql3 = "DELETE FROM courseTemp WHERE courseID = '$courseID' AND courseCost = '$courseCost' AND courseDuration = '$courseDur' AND user = '$id';";
+    $result3 = mysqli_query($conn,$sql3);
   }
   else if(isset($_POST['itemID']))
   {

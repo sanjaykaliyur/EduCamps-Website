@@ -6,7 +6,6 @@ session_start();
   }
   include 'connect.php';
 ?>
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,13 +20,14 @@ session_start();
     <title>EduCamps</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -73,7 +73,7 @@ session_start();
                     <li><a href="catalog2.php">Catalog</a></li>
                     <li><a href="forum.php">Reviews</a></li>
                     <li><a href="memories.php">Memories</a></li>
-                    <li><a href="visualization.php">Visualization</a></li>
+                    <li><a href="visualization2.php">Visualization</a></li>
                     <li><a href="activity.php">Activity</a></li>
                     <li><a href="faq.php">FAQ</a></li>
                     <li><a href="contact.php">Contact</a></li>

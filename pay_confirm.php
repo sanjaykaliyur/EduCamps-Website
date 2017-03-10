@@ -28,21 +28,27 @@
         if(!($array[0] == "")) {
           $bool = true;
           while($i < sizeof($array)) {
-            $sql2 = "SELECT * FROM COURSES WHERE course_ID = '$array[$i]';";
+            $sql2 = "SELECT * FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
             $result2 = mysqli_query($conn,$sql2);
-            $row2 = mysqli_fetch_assoc($result2);
-            $course_name = $row2['course_name'];
-            $course_cost = $row2['cost'];
-            $sql4 = "INSERT INTO USER_CAMPS (Username, Camp, Price) VALUES ('$id','$course_name','$course_cost');";
-            echo '<hr><p>'.$course_name.'</p><hr>';
-            $result4 = mysqli_query($conn,$sql4);
-            $sql5 = "SELECT spots FROM COURSES WHERE course_ID = '$array[$i]';";
-            $result5 = mysqli_query($conn,$sql5);
-            $row5 = mysqli_fetch_assoc($result5);
-            $spots = $row5['spots'] - 1;
-            $sql6 = "UPDATE COURSES SET spots = '$spots' WHERE course_ID = '$array[$i]';";
-            $result6 = mysqli_query($conn,$sql6);
-            $i++;
+            while($row2 = mysqli_fetch_assoc($result2)) {
+              $course_name = $row2['courseName'];
+              $course_cost = $row2['courseCost'];
+              $course_dur = $row2['courseDuration'];
+              $course_date = $row2['courseDate'];
+
+              $sql4 = "INSERT INTO USER_CAMPS (Username, Camp, Price, duration, date) VALUES ('$id','$course_name','$course_cost','$course_dur','$course_date');";
+              echo '<hr><p>'.$course_name.'</p><hr>';
+              $result4 = mysqli_query($conn,$sql4);
+              $sql5 = "SELECT spots FROM COURSES WHERE course_ID = '$array[$i]';";
+              $result5 = mysqli_query($conn,$sql5);
+              $row5 = mysqli_fetch_assoc($result5);
+              $spots = $row5['spots'] - 1;
+              $sql6 = "UPDATE COURSES SET spots = '$spots' WHERE course_ID = '$array[$i]';";
+              $result6 = mysqli_query($conn,$sql6);
+              $sql7 = "DELETE FROM courseTemp WHERE user = '$id';";
+              $result7 = mysqli_query($conn,$sql7);
+              $i++;
+            }
           }
         }
 

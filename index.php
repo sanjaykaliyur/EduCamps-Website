@@ -90,7 +90,7 @@ include 'header.php';
                     </div>
                     <div class="panel-body">
                         <p>View all of our camps and activities and sign up your child for camp. Registration is now OPEN!</p>
-                        <a href="register.php" class="btn btn-default">Register Now</a>
+                        <a href="register2.php" class="btn btn-default">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ include 'header.php';
                     </div>
                     <div class="panel-body">
                         <p>Pick up some sweet EduCamps swag and proudly show your passion for science and technology.</p>
-                        <a href="catalog.php" class="btn btn-default">Catalog</a>
+                        <a href="catalog2.php" class="btn btn-default">Catalog</a>
                     </div>
                 </div>
             </div>
