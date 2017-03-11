@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 10, 2017 at 06:44 AM
+-- Generation Time: Mar 11, 2017 at 09:51 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -101,18 +101,37 @@ CREATE TABLE `courseTemp` (
 --
 
 CREATE TABLE `FORUM` (
-  `Username` varchar(45) DEFAULT NULL,
+  `Username` varchar(45) NOT NULL,
   `entryDate` date NOT NULL,
-  `response` text NOT NULL
+  `response` text NOT NULL,
+  `campName` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `USERS`
+-- Table structure for table `userPics`
 --
 
-CREATE TABLE `USERS` (
+CREATE TABLE `userPics` (
+  `Username` varchar(45) DEFAULT NULL,
+  `image` varchar(135) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userPics`
+--
+
+INSERT INTO `userPics` (`Username`, `image`) VALUES
+('neil', './Images/Uploads/wallpaper-winter-snowy-generated-comfortable-scenery-natural-light-turned-houses-covered-thick-lights-snow-picture.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
   `Email` varchar(45) NOT NULL,
   `Username` varchar(45) NOT NULL,
   `Password` varchar(255) NOT NULL,
@@ -123,10 +142,10 @@ CREATE TABLE `USERS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `USERS`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `USERS` (`Email`, `Username`, `Password`, `Address`, `courses_cart`, `items_cart`, `childName`) VALUES
+INSERT INTO `users` (`Email`, `Username`, `Password`, `Address`, `courses_cart`, `items_cart`, `childName`) VALUES
 ('dasdada', 'neil', '$2a$15$vlLqqJKz6NHT/rz2SdoWdOkE8oGnBe7pZi5gaDA4ubcKlKT7vpera', '', '', '', 'jose'),
 ('josemail.com', 'Sanjay', '$2a$15$1joUjxQZXGfja/Q0zx4JYuqgRNbGcjvxl54H6I8yTieutWrDB9w4u', '1000China Gate', '', '', 'sanjays kid');
 
@@ -181,9 +200,15 @@ ALTER TABLE `courseTemp`
   ADD PRIMARY KEY (`user`,`courseID`,`courseDate`);
 
 --
--- Indexes for table `USERS`
+-- Indexes for table `FORUM`
 --
-ALTER TABLE `USERS`
+ALTER TABLE `FORUM`
+  ADD PRIMARY KEY (`Username`,`campName`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
   ADD UNIQUE KEY `Username` (`Username`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
