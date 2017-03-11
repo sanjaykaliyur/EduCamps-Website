@@ -31,7 +31,7 @@
 
      <div class="row">
          <div class="col-lg-12">
-             <h1 class="page-header">Catalog
+             <h1 >Catalog
                  <small>Purchase EduCamps Gear</small>
              </h1>
              <p>*Note: If you have registered your child for camp, you will receive a 15% discount on all merchandise purchased in this catalaog (Discount applied during checkout)</p>

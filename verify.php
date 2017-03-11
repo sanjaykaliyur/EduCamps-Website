@@ -15,8 +15,6 @@
     //$sql=  "insert into STUDENTS_MODULES (`MODULE_ModuleID`,`MODULE_Name`,`STUDENT_StudentID`,`Complete`,`Start_Date`,`TotalRating`,`badgeRationale`,`userScreenshot`)";
     //$sql= $sql." values('$moduleID',(SELECT Name from MODULE2 WHERE ModuleID=$moduleID LIMIT 1),'$id','$complete','$Start_Date', NULL,'$badgeRationale', NULL)";
      $sql = "INSERT INTO USERS (`Email`, `Username`, `Password`, `Address`,`childName`) VALUES('$parentEmail','$username','$hash','$address','$childName')";
-		 echo $sql;
-
      $result = mysqli_query($conn,$sql);
      if($result){
          echo "<script> location.href='login.php';</script>";
