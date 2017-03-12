@@ -3,7 +3,7 @@
  if(!isset($_SESSION['id'])) {
      $message = "You must be logged in!";
      echo "<script type='text/javascript'>alert('$message');</script>";
-     header('Location: register.php');
+     header('Location: register2.php');
  }
 session_start();
 
