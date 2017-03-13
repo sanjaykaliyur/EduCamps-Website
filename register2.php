@@ -105,9 +105,15 @@ crossorigin="anonymous"></script>
                       <div id="location">
                         <select name = "location" id="select_location" required data-validation-required-message="select a location">
                           <option selected="selected" value="Pick a Location">Location</option>
-                          <option value="San Jose, CA">San Jose, CA</option>
-                          <option value="Seattle, WA">Seattle, WA</option>
+                          <option value="Santa Clara, CA">Santa Clara, CA</option>
+                          <option value="Los Angeles, CA">Los Angeles, CA</option>
                           <option value="Austin, TX">Austin, TX</option>
+                          <option value="Boulder, CO">Boulder, CO</option>
+                          <option value="Boston, MA">Boston, MA</option>
+                          <option value="Seattle, WA">Seattle, WA</option>
+                          <option value="Chicago, IL">Chicago, IL</option>
+                          <option value="Miami, FL">Miami, FL</option>
+                          <option value="Atlanta, GA">Atlanta, GA</option>
                         </select>
                       </div>
 
@@ -129,7 +135,9 @@ crossorigin="anonymous"></script>
                             $sql2 = "SELECT * FROM children WHERE username = '$id'";
                             $result2 = mysqli_query($conn,$sql2);
                             while($row2 = mysqli_fetch_assoc($result2)) {
+                              if($row2['childName'] !=  "") {
                               echo '<option value="'.$row2['childName'].'">'.$row2['childName'].'</option>';
+                              }
                             }
                         echo '</select>
                             <br><br>
