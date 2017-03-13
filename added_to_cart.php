@@ -6,6 +6,9 @@
      header('Location: register2.php');
  }
 
+//session_start();
+
+
 if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']) && isset($_POST['courseID']) && isset($_POST['duration']) && isset($_POST['date'])) {
   $duration = $_POST['duration'];
   $date =  $_POST['date'];
