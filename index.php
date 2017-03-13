@@ -144,6 +144,32 @@ include 'header.php';
             </div>
         </div>
         <!-- /.row -->
+        <hr>
+
+        <!-- Map -->
+        <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/embed?mid=1tISWrBW8ZcQj_T-FSu1nsBw_jLU" width="640" height="480"></iframe>
+
+        <!-- Camp Locations -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Camp Locations</h2>
+            </div>
+            <div class="col-md-6">
+                <p></p>
+                <ul>
+                  <li>Santa Clara, CA (500 El Camino Real, Santa Clara, CA 95053)</li>
+                  <li>Los Angeles, CA (245 N Beverly Dr, Beverly Hills, CA 90210)</li>
+                  <li>Austin, TX (110 Inner Campus Dr, Austin, TX 78705)</li>
+                  <li>Boulder, CO (2055 Regent Dr, Boulder, CO 80309)</li>
+                  <li>Boston, MA (86 Brattle Street, Cambrdge, MA 02138)</li>
+                  <li>Seattle, WA (1410 NE Campus Parkway, Seattle, WA 98195)</li>
+                  <li>Chicago, IL (5801 S Ellis Ave, Chicago, IL 60637)</li>
+                  <li>Miami, FL (1320 S Dixie Hwy, Coral Gables, FL 33146)</li>
+                  <li>Atlanta, GA (353 Ferst Dr, Atlanta, GA 30332)</li>
+                </ul>
+            </div>
+        </div>
+
 
         <!-- Features Section -->
         <div class="row">
@@ -164,8 +190,8 @@ include 'header.php';
                 <img class="img-responsive" src="Images/Coen161project-logo-empty.png" style="height=150%;width=200%;">
             </div>
         </div>
-        <!-- /.row -->
 
+        <!-- /.row -->
         <hr>
 
         <!-- Call to Action Section -->

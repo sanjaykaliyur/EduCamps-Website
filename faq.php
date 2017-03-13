@@ -1,6 +1,9 @@
 <?php include 'header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
+    <br>
+    <br>
+    <br>
 
     <!-- Page Content -->
     <div class="container">
