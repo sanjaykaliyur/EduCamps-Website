@@ -84,7 +84,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
     echo '<h1 style="text-align: center;"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
    }
    else {
-   echo '<div class="container">
+   echo '<div class="container" style="width: 150%;">
         	<div class="row">
         		<div class="col-xs-8">
         			<div class="panel panel-info">

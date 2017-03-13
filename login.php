@@ -10,6 +10,13 @@ if(isset($_SESSION['name'])) {
     exit;
 }
 ?>
+<head>
+  <style>
+  .row {
+    padding-left: 20px;
+  }
+  </style>
+</head>
 
 <body>
   <br>

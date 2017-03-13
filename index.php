@@ -23,6 +23,16 @@ include 'header.php';
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style>
+    .imgs {
+
+    top: 0;
+    left: 0;
+    min-width: 80%;
+    height: 500px;
+    max-width: none;
+  }
+    </style>
 
 </head>
 
@@ -39,20 +49,20 @@ include 'header.php';
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill">
-                  <center><img class="logo" src="Images/home-banner.png" style:"width: 100%;"></img></center>
+                  <center><img class="imgs" src="Images/home-banner.png" ></img></center>
                 </div>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
                 <div class="fill">
-                  <center><img class="camp1" src="Images/stanford.jpg"></img></div></center>
+                  <center><img class="imgs" src="Images/stanford.jpg"></img></div></center>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
               <div class="fill">
-                <center><img class="camp2" src="Images/camp2.png"></img></div></center>
+                <center><img class="imgs" src="Images/camp2.png"></img></div></center>
               <div class="carousel-caption">
                 </div>
             </div>
