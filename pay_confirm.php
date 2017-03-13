@@ -27,28 +27,39 @@
 
         if(!($array[0] == "")) {
           $bool = true;
-          while($i < sizeof($array)) {
-            $sql2 = "SELECT * FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
+          foreach($array as $i => $item) {
+            $sql2 = "SELECT courseName, courseDuration, courseCost, courseDate, childName, location FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
             $result2 = mysqli_query($conn,$sql2);
-            while($row2 = mysqli_fetch_assoc($result2)) {
+            while($row2 = mysqli_fetch_assoc($result2)){
+              $rows2[] = $row2;
+            }
+            foreach($rows2 as $row2) {
               $course_name = $row2['courseName'];
               $course_cost = $row2['courseCost'];
               $course_dur = $row2['courseDuration'];
               $course_date = $row2['courseDate'];
+              $childName = $row2['childName'];
+              $location = $row2['location'];
 
-              $sql4 = "INSERT INTO USER_CAMPS (Username, Camp, Price, duration, date) VALUES ('$id','$course_name','$course_cost','$course_dur','$course_date');";
-              echo '<hr><p>'.$course_name.'</p><hr>';
-              $result4 = mysqli_query($conn,$sql4);
-              $sql5 = "SELECT spots FROM COURSES WHERE course_ID = '$array[$i]';";
-              $result5 = mysqli_query($conn,$sql5);
-              $row5 = mysqli_fetch_assoc($result5);
-              $spots = $row5['spots'] - 1;
-              $sql6 = "UPDATE COURSES SET spots = '$spots' WHERE course_ID = '$array[$i]';";
-              $result6 = mysqli_query($conn,$sql6);
-              $sql7 = "DELETE FROM courseTemp WHERE user = '$id';";
+              $sql4 = "INSERT INTO USER_CAMPS (Username, Camp, Price, duration, date, childName, location) VALUES ('$id','$course_name','$course_cost','$course_dur','$course_date','$childName','$location');";
+              echo '<hr><p>'.$course_name.' <b> for '.$childName.'</b></p><hr>';
+              if($result4 = mysqli_query($conn,$sql4)) {
+                $sql5 = "SELECT spots FROM COURSES WHERE course_ID = '$array[$i]';";
+                $result5 = mysqli_query($conn,$sql5);
+                $row5 = mysqli_fetch_assoc($result5);
+                $spots = $row5['spots'] - 1;
+                $sql6 = "UPDATE COURSES SET spots = '$spots' WHERE course_ID = '$array[$i]';";
+                $result6 = mysqli_query($conn,$sql6);
+              }
+              else {
+                echo '<script> alert("Fail to register. Child & Camp already paid.")</script>';
+                echo "<script> location.href='register2.php';</script>";
+              }
+              $sql7 = "DELETE FROM courseTemp WHERE user = '$id' AND courseID = '$array[$i]';";
               $result7 = mysqli_query($conn,$sql7);
-              $i++;
             }
+            $i++;
+            $rows2 = array();
           }
         }
 

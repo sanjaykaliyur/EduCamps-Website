@@ -101,32 +101,48 @@ crossorigin="anonymous"></script>
                       <input type="hidden" name="cost" value="'.$row['cost'].'"></input>
                       <input type="hidden" name="courseName" value="'.$row['course_name'].'"></input>
                       <input type="hidden" name="courseID" value="'.$row['course_ID'].'"></input>
-                      <p>Locations:
-                           <ul>
-                             <li>San Jose, CA</li>
-                             <li>Seattle, WA</li>
-                             <li>Austin, TX</li>
-                      </p>
-                      <div id="dates" style="float: right;">
+
+                      <div id="location">
+                        <select name = "location" id="select_location" required data-validation-required-message="select a location">
+                          <option selected="selected" value="Pick a Location">Location</option>
+                          <option value="San Jose, CA">San Jose, CA</option>
+                          <option value="Seattle, WA">Seattle, WA</option>
+                          <option value="Austin, TX">Austin, TX</option>
+                        </select>
+                      </div>
+
+                      <div id="dates">
                         <select name = "duration" id="select_1" required data-validation-required-message="select a duration">
                           <option selected="selected" value="">Duration</option>
                           <option value="1 week">1 week</option>
                           <option value="2 weeks">2 weeks</option>
                         </select>
                         <br>
+
                         <select name = "date" id="select_2" required data-validation-required-message="select a date">
                           <option selected="selected" value="">Dates</option>
-                        </select>
-                      </div>';
+                        </select><br>';
+
+                      echo '<div id="children" style="">
+                            <select name = "child" id="select_child" required data-validation-required-message="select a child">
+                            <option selected="selected" value="">Child Name</option>';
+                            $sql2 = "SELECT * FROM children WHERE username = '$id'";
+                            $result2 = mysqli_query($conn,$sql2);
+                            while($row2 = mysqli_fetch_assoc($result2)) {
+                              echo '<option value="'.$row2['childName'].'">'.$row2['childName'].'</option>';
+                            }
+                        echo '</select>
+                            <br><br>
+                            </div>';
                       if($row['spots'] != 0)
-                        echo '<button class="btn btn-primary" type="submit">Add to Cart<i class="fa fa-angle-right"></i></button>';
+                        echo '<button class="btn btn-primary" style = "margin: auto;" type="submit">Add to Cart<i class="fa fa-angle-right"></i></button><hr>';
                       else {
-                        echo '<p><b>Course is full!</b></p>';
+                        echo '<p><b>Course is full!</b></p><hr>';
                       }
               echo'</div>
               </form>
             </div>
-            <hr>';
+            ';
             $counter++;
      }
      ?>

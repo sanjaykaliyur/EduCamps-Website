@@ -24,7 +24,16 @@
     <label for="field1"><span>Password<span class="required">*</span></span><input name = "password" type = "password" required data-validation-required-message="Password is required."/></label>
     <br>
     <br>
-    <label for="field1"><span>Child name<span class="required">*</span></span><input name ="childName"  required data-validation-required-message="Child Name Required."/></label>
+    <label for="field1"><span>Child 1 name<span class="required">*</span></span><input name ="childName1"  required data-validation-required-message="Child Name Required."/></label><br>
+    <label for="field1"><span>Child 2 name<span class="required"></span></span><input name ="childName2"/></label><br>
+    <label for="field1"><span>Child 3 name<span class="required"></span></span><input name ="childName3"/></label><br>
+    <label for="field1"><span>Child 4 name<span class="required"></span></span><input name ="childName4"/></label><br>
+    <label for="field1"><span>Child 5 name<span class="required"></span></span><input name ="childName5"/></label><br>
+    <label for="field1"><span>Child 6 name<span class="required"></span></span><input name ="childName6"/></label><br>
+    <label for="field1"><span>Child 7 name<span class="required"></span></span><input name ="childName7"/></label><br>
+    <label for="field1"><span>Child 8 name<span class="required"></span></span><input name ="childName8"/></label><br>
+    <label for="field1"><span>Child 9 name<span class="required"></span></span><input name ="childName9"/></label><br>
+    <label for="field1"><span>Child 10 name<span class="required"></span></span><input name ="childName10"/></label>
     <br>
     <br>
     <label for="field2"><span>Date of Birth<span class="required">*</span></span><input id = "childDOB" type="date" class="input-field" name="field2" value="" required data-validation-required-message="Date Of Birth Required" /></label>
@@ -39,11 +48,11 @@
     <label><span>Parent's Telephone</span><input type="text" class="tel-number-field" name="tel_no_1" value="" maxlength="4" >-<input type="text" class="tel-number-field" name="tel_no_2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" name="tel_no_3" value="" maxlength="10"/></label>
    <br>
    <br>
-    <label for="field4"><span>Child's Grade*</span><br><select id = "childGrade" required data-validation-required-message="Child Grade Required." name="field4" class="select-field">
+    <!--label for="field4"><span>Child's Grade*</span><br><select id = "childGrade" required data-validation-required-message="Child Grade Required." name="field4" class="select-field">
       <option value="General Question">6th grade</option>
       <option value="Advertise">7th grade</option>
       <option value="Partnership">8th grade</option>
-    </select></label>
+    </select></label-->
     <!--br>
     <br>
     <label for="field5"><span>Camp Duration*</span><br><select id = "campDuration" name="field4" class="select-field" required data-validation-required-message="Camp Duration Required.">

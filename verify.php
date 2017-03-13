@@ -8,13 +8,62 @@
     $username = $_POST['username'];
     $address = $_POST['address'];
     $parentEmail = $_POST['parentEmail'];
-		$childName = $_POST['childName'];
+
+		$childName1 = $_POST['childName1'];
+		$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username,'$childName1');";
+		$result = mysqli_query($conn,$sql);
+
+		if((isset($_POST['childName2']))) {
+			$childName2 = $_POST['childName2'];
+			$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName2');";
+			$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName3']))) {
+				$childName3 = $_POST['childName3'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName3');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName4']))) {
+				$childName4 = $_POST['childName4'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName4');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName5']))) {
+				$childName5 = $_POST['childName5'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName5');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName6']))) {
+				$childName6 = $_POST['childName6'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName6');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName7']))) {
+				$childName7 = $_POST['childName7'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName7');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName8']))) {
+				$childName8 = $_POST['childName8'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName8');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName9']))) {
+				$childName9 = $_POST['childName9'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName9');";
+				$result = mysqli_query($conn,$sql);
+		}
+		if((isset($_POST['childName10']))) {
+				$childName10 = $_POST['childName10'];
+				$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName10');";
+				$result = mysqli_query($conn,$sql);
+		}
 
     $bcrypt = new Bcrypt(15);
     $hash = $bcrypt->hash($password);
     //$sql=  "insert into STUDENTS_MODULES (`MODULE_ModuleID`,`MODULE_Name`,`STUDENT_StudentID`,`Complete`,`Start_Date`,`TotalRating`,`badgeRationale`,`userScreenshot`)";
     //$sql= $sql." values('$moduleID',(SELECT Name from MODULE2 WHERE ModuleID=$moduleID LIMIT 1),'$id','$complete','$Start_Date', NULL,'$badgeRationale', NULL)";
-     $sql = "INSERT INTO USERS (`Email`, `Username`, `Password`, `Address`,`childName`) VALUES('$parentEmail','$username','$hash','$address','$childName')";
+     $sql = "INSERT INTO USERS (`Email`, `Username`, `Password`, `Address`) VALUES('$parentEmail','$username','$hash','$address')";
      $result = mysqli_query($conn,$sql);
      if($result){
          echo "<script> location.href='login.php';</script>";

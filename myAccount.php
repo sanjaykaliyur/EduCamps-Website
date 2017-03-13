@@ -18,9 +18,9 @@ echo '<div id="accountWrapper" style="padding-left: 10px;">';
   echo '<h3>My courses:</h3>';
   while($row = mysqli_fetch_assoc($result)) {
     echo '<hr><p><h2>'.$row['Camp'].'</h2></p>';
-    echo '<p>Child: '.$row1['childName'].'</p>';
-    echo '<p>Duration: '.$row['duration'].'</p>';
-    echo '<p>Date Period '.$row['date'].'</p><hr>';
+    echo '<p><b>Child:</b> '.$row['childName'].'</p>';
+    echo '<p><b>Duration:</b> '.$row['duration'].'</p>';
+    echo '<p><b>Date Period:</b> '.$row['date'].'</p><hr>';
   }
   echo '<br>
         <h3> My items:</h3>';

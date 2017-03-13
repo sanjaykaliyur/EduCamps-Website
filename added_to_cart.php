@@ -3,9 +3,8 @@
  if(!isset($_SESSION['id'])) {
      $message = "You must be logged in!";
      echo "<script type='text/javascript'>alert('$message');</script>";
-     header('Location: register.php');
+     header('Location: register2.php');
  }
-session_start();
 
 if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']) && isset($_POST['courseID']) && isset($_POST['duration']) && isset($_POST['date'])) {
   $duration = $_POST['duration'];
@@ -14,11 +13,13 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
   $courseID = $_POST['courseID'];
   $cost = $_POST['cost'];
   $spots = $_POST['spots'];
+  $child = $_POST['child'];
+  $location = $_POST['location'];
 
   if($duration == "2 weeks"){
     $cost = $cost * 2;
   }
-  $sql0 = "INSERT INTO `courseTemp`(`user`, `courseID`, `courseName`, `courseDuration`, `courseCost`, `courseDate`) VALUES ('$id','$courseID','$course','$duration', '$cost','$date')";
+  $sql0 = "INSERT INTO `courseTemp`(`user`, `courseID`, `courseName`, `courseDuration`, `courseCost`, `courseDate`, `childName`,`location`) VALUES ('$id','$courseID','$course','$duration', '$cost','$date','$child','$location')";
   $result0 = mysqli_query($conn,$sql0);
 
   $sql = "SELECT courses_cart FROM USERS WHERE Username = '$id';";
@@ -72,7 +73,12 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
    $totalCost = $i = 0;
    $bool = $bool2 = false;
    // if first element in array and array2 == "" then display
-
+   echo '<div id="discounts" style = "margin:auto;">
+          <ul><b>Discounts:</b>
+           <li>If you have more than 1 child registered you get a 10% discount!</li>
+           <li>If you already registered and wish to buy a catalog item you get a 15% discount!</li>
+         </ul>
+        </div>';
    if($array[0] == "" && $array2[0] == ""){
     echo '<h1 style="text-align: center;"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
    }
@@ -108,45 +114,46 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                 //courses
                 if(!($array[0] == "")) {
                   $bool = true;
-                while($i < sizeof($array)) {
-                  //$sql2 = "SELECT * FROM COURSES WHERE course_ID = '$array[$i]';";
-                  $sql2 = "SELECT * FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
-                  $result2 = mysqli_query($conn,$sql2);
-
-                  while($row2 = mysqli_fetch_assoc($result2)) {
-
-                  echo'
-        					<div class="row">
-        						<div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-        						</div>
-        						<div class="col-xs-4">
-        							<h4 class="product-name"><strong></strong></h4><h4><small>'.$row2['courseName'].'</small></h4>
-                      <h5 class="product-name"><strong></strong></h4><h4><small>'.$row2['courseDuration'].'</small></h5>
-        						</div>
-        						<div class="col-xs-6">
-        							<div class="col-xs-6 text-right">';
-                      echo'
-        								<h6><strong>$'.$row2['courseCost'].'.00<span class="text-muted"></span></strong></h6>';
-                      echo'
-        							</div>
-        							<div class="col-xs-2">
-                        <form method="POST" action="remove_cart_item.php">
-                          <input type="hidden" name="courseID" value="'.$array[$i].'"></input>
-                          <input type="hidden" name= "courseCost"  value = "'.$row2['courseCost'].'"></input>
-                          <input type="hidden" name= "courseDuration"  value = "'.$row2['courseDuration'].'"></input>
-          								<button type="submit" class="btn btn-link btn-xs">
-          									<span class="glyphicon glyphicon-trash"> </span>
-          								</button>
-                        </form>
-        							</div>
-        						</div>
-        					</div>
-        					<hr>
-                  ';
-                  $totalCost += $row2['courseCost'];
+                  foreach($array as $i => $item) {
+                    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
+                    $result2 = mysqli_query($conn,$sql2);
+                    while($row2 = mysqli_fetch_assoc($result2)){
+                      $rows2[] = $row2;
+                      $totalCost += $row2['courseCost'];
+                    }
+                  foreach($rows2 as $row4) {
+                    echo'
+          					<div class="row">
+          						<div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+          						</div>
+          						<div class="col-xs-4">
+          							<h4 class="product-name"><strong></strong></h4><h4><small>'.$row4['courseName'].'</small></h4>
+                        <h5 class="product-name"><strong></strong></h4><h4><small>'.$row4['courseDuration'].'</small></h5>
+                        <h6 class="product-name"><strong></strong></h4><h4><small>Child: '.$row4['childName'].'</small></h6>
+          						</div>
+          						<div class="col-xs-6">
+          							<div class="col-xs-6 text-right">';
+                        echo'
+          								<h6><strong>$'.$row4['courseCost'].'.00<span class="text-muted"></span></strong></h6>';
+                        echo'
+          							</div>
+          							<div class="col-xs-2">
+                          <form method="POST" action="remove_cart_item.php">
+                            <input type="hidden" name="courseID" value="'.$array[$i].'"></input>
+                            <input type="hidden" name= "courseCost"  value = "'.$row4['courseCost'].'"></input>
+                            <input type="hidden" name= "courseDuration"  value = "'.$row4['courseDuration'].'"></input>
+            								<button type="submit" class="btn btn-link btn-xs">
+            									<span class="glyphicon glyphicon-trash"> </span>
+            								</button>
+                          </form>
+          							</div>
+          						</div>
+          					</div>
+          					<hr>
+                    ';
+                  }
                   $i++;
-                }
-                  //$i++;
+                  $rows2 = array();
                 }
               }
                 //items
@@ -154,7 +161,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                 if(!($array2[0] == "")) {
                   $bool2 = true;
                   while($j < sizeof($array2)) {
-                    $sql3 = "SELECT * FROM CATALOG WHERE item_ID = '$array2[$j]';";
+                    $sql3 = "SELECT image, item_name, item_cost FROM CATALOG WHERE item_ID = '$array2[$j]';";
                     $result3 = mysqli_query($conn,$sql3);
                     $row3 = mysqli_fetch_assoc($result3);
 
@@ -185,8 +192,9 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                     $j++;
                   }
                 }
-                $sql = "SELECT * FROM USER_CAMPS WHERE Username = '$id';";
+                $sql = "SELECT Username FROM USER_CAMPS WHERE Username = '$id';";
                 $result = mysqli_query($conn,$sql);
+
                 if( mysqli_num_rows($result) > 0)
                 {
                   $bool = true;
@@ -195,10 +203,23 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
         					<div class="row">
         						<div class="text-center">
         							<div class="col-xs-9">';
-                        if($bool && $bool2) {
-                          echo '<h6 class="text-right">Total without discount: $'.$totalCost.'.00</h6>';
-          								echo '<h6 class="text-right">discount: - $'.floor((0.15*$totalCost)).'.00</h6>';
-                        }
+                      //check for discounts : if more than 1 child and if already signed up for course and buys catalog item
+                      $discount1 = floor((0.15*$totalCost));
+                      $discount2 = floor((0.10*$totalCost));
+                      if($bool && $bool2) {
+                        echo '<h6 class="text-right">Total without discount: $'.$totalCost.'.00</h6>';
+        								echo '<h6 class="text-right">discount: - $'.floor((0.15*$totalCost)).'.00</h6>';
+                      }
+                      $sqly = "SELECT childName FROM courseTemp WHERE user = '$id';";
+                      $res = mysqli_query($conn,$sqly);
+                      $row = mysqli_fetch_assoc($res);
+                      $child = $row['childName'];
+                      $sqlx = "SELECT COUNT(*) FROM USER_CAMPS WHERE Username = '$id' AND childName != '$child';";
+                      $res = mysqli_query($conn,$sqlx);
+                      $row = mysqli_fetch_assoc($res);
+                      if( $row['COUNT(*)'] > 1) {
+        								echo '<h6 class="text-right">discount: - $'.floor((0.10*$totalCost)).'.00</h6>';
+                      }
                         echo '
         							</div>
         							<!--div class="col-xs-3">
@@ -214,7 +235,16 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
         						<div class="col-xs-9">';
                     if($bool && $bool2)
                     {
-                      $totalCost = $totalCost - floor((0.15*$totalCost));
+                      $totalCost = $totalCost - $discount1;
+                      echo $totalCost;
+                    }
+
+                    $sqlx = "SELECT COUNT(*) FROM USER_CAMPS WHERE Username = '$id' AND childName != '$child';";
+                    $res = mysqli_query($conn,$sqlx);
+                    $row = mysqli_fetch_assoc($res);
+                    if( $row['COUNT(*)'] > 1) {
+                      $totalCost = $totalCost - $discount2;
+                      echo $totalCost;
                     }
                     echo'
         							<h4 class="text-right">Total: $'.$totalCost.'.00 <strong></strong></h4>
