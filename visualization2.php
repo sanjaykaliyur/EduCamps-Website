@@ -11,32 +11,37 @@ include 'header.php';
 </head>
 <html>
   <body>
-    <canvas id="canvas" width="900" height="800" style="padding-top: 100px; margin: auto;"></canvas>
-    <script>
-      $.ajax({
-        type: 'POST',
-        url: 'getData.php',
-        dataType: 'json',
-        success: function (data) {
-          var ctx = document.getElementById("canvas");
-          var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: {
-              responsive: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        }
-                    }]
-                }
-            }
-          });
-        }
-      });
-    </script>
+    <div>
+      <canvas id="canvas" width="900" height="800" style="padding-top: 100px; margin: auto;"></canvas>
+      <script>
+        $.ajax({
+          type: 'POST',
+          url: 'getData.php',
+          dataType: 'json',
+          success: function (data) {
+            var ctx = document.getElementById("canvas");
+            var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: data,
+              options: {
+                responsive: false,
+                  scales: {
+                      yAxes: [{
+                          ticks: {
+                              beginAtZero:true
+                          }
+                      }]
+                  }
+              }
+            });
+          }
+        });
+      </script>
+    </div>
+
   </body>
 </html>
+
+</script>
 
 <? include 'footer.php'; ?>
