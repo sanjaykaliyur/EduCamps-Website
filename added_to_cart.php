@@ -6,9 +6,6 @@
      header('Location: register2.php');
  }
 
-//session_start();
-
-
 if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']) && isset($_POST['courseID']) && isset($_POST['duration']) && isset($_POST['date'])) {
   $duration = $_POST['duration'];
   $date =  $_POST['date'];
@@ -60,6 +57,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
    <link rel="stylesheet" type="text/css" href="style.css">
    <style>
    body {margin-top: 20px;}
+   #discounts {color: #5cb85c;}
    </style>
  </head>
  <body>
@@ -76,12 +74,12 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
    $totalCost = $i = 0;
    $bool = $bool2 = false;
    // if first element in array and array2 == "" then display
-   echo '<div id="discounts" style = "margin:auto;">
+   echo '<div id="discounts">
           <ul><b>Discounts:</b>
            <li>If you have more than 1 child registered you get a 10% discount!</li>
            <li>If you already registered and wish to buy a catalog item you get a 15% discount!</li>
          </ul>
-        </div>';
+        </div><br><br><br>';
    if($array[0] == "" && $array2[0] == ""){
     echo '<h1 style="text-align: center;"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
    }
@@ -132,7 +130,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
           						<div class="col-xs-4">
           							<h4 class="product-name"><strong></strong></h4><h4><small>'.$row4['courseName'].'</small></h4>
                         <h5 class="product-name"><strong></strong></h4><h4><small>'.$row4['courseDuration'].'</small></h5>
-                        <h6 class="product-name"><strong></strong></h4><h4><small>Child: '.$row4['childName'].'</small></h6>
+                        <h5 class="product-name"><strong></strong></h4><h4><small>Child: '.$row4['childName'].'</small></h5>
           						</div>
           						<div class="col-xs-6">
           							<div class="col-xs-6 text-right">';
@@ -239,7 +237,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                     if($bool && $bool2)
                     {
                       $totalCost = $totalCost - $discount1;
-                      echo $totalCost;
+
                     }
 
                     $sqlx = "SELECT COUNT(*) FROM USER_CAMPS WHERE Username = '$id' AND childName != '$child';";
@@ -247,7 +245,6 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                     $row = mysqli_fetch_assoc($res);
                     if( $row['COUNT(*)'] > 1) {
                       $totalCost = $totalCost - $discount2;
-                      echo $totalCost;
                     }
                     echo'
         							<h4 class="text-right">Total: $'.$totalCost.'.00 <strong></strong></h4>

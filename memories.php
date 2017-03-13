@@ -96,30 +96,33 @@ $max_file_size = 3000000; // size in bytes
           ';
           ?>
   <div id = "uploadImg">
-    <?php
-      $sql2 = "SELECT COUNT(*) FROM userPics WHERE Username = 'neil';";
-      $result2 = mysqli_query($conn,$sql2);
-      $row2 = mysqli_fetch_assoc($result2);
-      if($row2['COUNT(*)'] == 10)
-      {
-        echo "<h3>You have uploaded the max amount of 10 pictures!</h3>";
-      }
-      else { echo '
-        <form id="Upload" action="upload.php" enctype="multipart/form-data" method="post">
-          <h4>
-              Upload up to 10 memories!
-          </h4>
+    <body>
+      <?php
+        if(isset($_SESSION['id'])) {
+        $sql2 = "SELECT COUNT(*) FROM userPics WHERE Username = 'neil';";
+        $result2 = mysqli_query($conn,$sql2);
+        $row2 = mysqli_fetch_assoc($result2);
+        if($row2['COUNT(*)'] == 10)
+        {
+          echo "<h3>You have uploaded the max amount of 10 pictures!</h3>";
+        }
+        else { echo '
+          <form id="Upload" action="upload.php" enctype="multipart/form-data" method="post">
+            <h4>
+                Upload up to 10 memories!
+            </h4>
 
-          <p>
-              <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
-          </p>
-          <p>
-              <label for="file">Select your image (.JPG & .PNG only)</label>
-              <input type="file" name="fileToUpload" id="fileToUpload">
-          <p>
-              <input type="submit" value="Upload Image" name="submit">
-          </p>
-        </form>';
+            <p>
+                <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
+            </p>
+            <p>
+                <label for="file">Select your image (.JPG & .PNG only)</label>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+            <p>
+                <input type="submit" value="Upload Image" name="submit">
+            </p>
+          </form>';
+        }
       }
     ?>
   </div>
@@ -137,6 +140,5 @@ $max_file_size = 3000000; // size in bytes
   </script>
 </body>
 </html>
-
 
 <?php include 'footer.php' ?>

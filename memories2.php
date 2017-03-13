@@ -23,7 +23,7 @@ $max_file_size = 30000; // size in bytes
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>			
+            <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -77,28 +77,32 @@ $max_file_size = 30000; // size in bytes
     </head>
 
     <body>
-    <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post">
+    <?php
+    if(isset($_SESSION['id'])) {
+      echo '
+      <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post">
 
-        <h1>
-            Upload Picture
-        </h1>
+          <h1>
+              Upload Picture
+          </h1>
 
-        <p>
-            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
-        </p>
+          <p>
+              <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
+          </p>
 
-        <p>
-            <label for="file">Select your image (.JPG & .PNG only)</label>
-            <input id="file" type="file" name="file">
-        </p>
-		
+          <p>
+              <label for="file">Select your image (.JPG & .PNG only)</label>
+              <input id="file" type="file" name="file">
+          </p>
 
-        <p>
-            <input id="submit" type="submit" name="submit" value="Upload">
-        </p>
 
-    </form>
-	<?php ?>
+          <p>
+              <input id="submit" type="submit" name="submit" value="Upload">
+          </p>
+
+      </form>';
+    }
+?>
 
     </body>
 

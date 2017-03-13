@@ -10,7 +10,7 @@
     $parentEmail = $_POST['parentEmail'];
 
 		$childName1 = $_POST['childName1'];
-		$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username,'$childName1');";
+		$sql = "INSERT INTO `children`(`username`, `childName`) VALUES ('$username','$childName1');";
 		$result = mysqli_query($conn,$sql);
 
 		if((isset($_POST['childName2']))) {
@@ -61,16 +61,15 @@
 
     $bcrypt = new Bcrypt(15);
     $hash = $bcrypt->hash($password);
-    //$sql=  "insert into STUDENTS_MODULES (`MODULE_ModuleID`,`MODULE_Name`,`STUDENT_StudentID`,`Complete`,`Start_Date`,`TotalRating`,`badgeRationale`,`userScreenshot`)";
-    //$sql= $sql." values('$moduleID',(SELECT Name from MODULE2 WHERE ModuleID=$moduleID LIMIT 1),'$id','$complete','$Start_Date', NULL,'$badgeRationale', NULL)";
+
      $sql = "INSERT INTO USERS (`Email`, `Username`, `Password`, `Address`) VALUES('$parentEmail','$username','$hash','$address')";
      $result = mysqli_query($conn,$sql);
      if($result){
          echo "<script> location.href='login.php';</script>";
-     }/*else{
+     }else{
         echo '<script> alert("fail to register")</script>';
         echo "<script> location.href='login.php';</script>";
-      }*/
+      }
   }
   if(isset($_POST['user']) && isset($_POST['pass'])) {
     $dbservername = "localhost";

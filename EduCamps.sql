@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 11, 2017 at 09:51 PM
+-- Generation Time: Mar 13, 2017 at 09:18 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -51,6 +51,37 @@ INSERT INTO `CATALOG` (`item_ID`, `item_name`, `item_cost`, `item_desc`, `image`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `children`
+--
+
+CREATE TABLE `children` (
+  `username` varchar(45) NOT NULL,
+  `childName` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `children`
+--
+
+INSERT INTO `children` (`username`, `childName`) VALUES
+('neil', 'Caleb'),
+('neil', 'Clark'),
+('neil', 'Jordan'),
+('neil', 'Kevin'),
+('neil', 'Kobe'),
+('neil', 'Michael'),
+('neil', 'Parker'),
+('neil', 'Thomas'),
+('neil', 'Tony'),
+('neil2', 'a'),
+('neil2', 'b'),
+('neil2', 'c'),
+('neil2', 'd'),
+('neil2', 'e');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `COURSES`
 --
 
@@ -69,8 +100,8 @@ CREATE TABLE `COURSES` (
 --
 
 INSERT INTO `COURSES` (`course_ID`, `course_name`, `cost`, `spots`, `image`, `description`, `date`) VALUES
-(1, 'Introduction to Web Programming', 499, 49, '', 'This camp covers basic HTML, CSS, and Javascript.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(2, 'Introduction to Python', 499, 50, '', 'This camp covers all the basic elements of Python.\r\n\r\n', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(1, 'Introduction to Web Programming', 499, 47, '', 'This camp covers basic HTML, CSS, and Javascript.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(2, 'Introduction to Python', 499, 49, '', 'This camp covers all the basic elements of Python.\r\n\r\n', '8 wks. long (June 19, 2017 - August 18, 2017)'),
 (3, 'Introduction to Java', 499, 50, '', 'This camp covers all the basic elements of Java.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
 (4, 'Introduction to Robotics', 699, 50, '', 'This introductory physics camp covers all the basics of Mechanics and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
 (5, 'Electrical Engineering: Circuits', 699, 50, '', 'This introductory chemistry camp covers all the basics of chemistry and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
@@ -88,10 +119,12 @@ INSERT INTO `COURSES` (`course_ID`, `course_name`, `cost`, `spots`, `image`, `de
 CREATE TABLE `courseTemp` (
   `user` varchar(45) NOT NULL,
   `courseID` int(10) NOT NULL,
-  `courseName` varchar(45) DEFAULT NULL,
+  `courseName` varchar(45) NOT NULL,
   `courseDuration` varchar(45) NOT NULL,
   `courseCost` int(10) DEFAULT NULL,
-  `courseDate` varchar(45) NOT NULL
+  `courseDate` varchar(45) NOT NULL,
+  `childName` varchar(45) NOT NULL,
+  `location` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -118,13 +151,6 @@ CREATE TABLE `userPics` (
   `image` varchar(135) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `userPics`
---
-
-INSERT INTO `userPics` (`Username`, `image`) VALUES
-('neil', './Images/Uploads/wallpaper-winter-snowy-generated-comfortable-scenery-natural-light-turned-houses-covered-thick-lights-snow-picture.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -137,17 +163,17 @@ CREATE TABLE `users` (
   `Password` varchar(255) NOT NULL,
   `Address` varchar(255) DEFAULT NULL,
   `courses_cart` varchar(45) DEFAULT NULL,
-  `items_cart` varchar(45) DEFAULT NULL,
-  `childName` varchar(45) DEFAULT NULL
+  `items_cart` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Email`, `Username`, `Password`, `Address`, `courses_cart`, `items_cart`, `childName`) VALUES
-('dasdada', 'neil', '$2a$15$vlLqqJKz6NHT/rz2SdoWdOkE8oGnBe7pZi5gaDA4ubcKlKT7vpera', '', '', '', 'jose'),
-('josemail.com', 'Sanjay', '$2a$15$1joUjxQZXGfja/Q0zx4JYuqgRNbGcjvxl54H6I8yTieutWrDB9w4u', '1000China Gate', '', '', 'sanjays kid');
+INSERT INTO `users` (`Email`, `Username`, `Password`, `Address`, `courses_cart`, `items_cart`) VALUES
+('neil@gmail.com', 'neil', '$2a$15$AognyjTjCORj3hgykJ0yr.PO57i7BXuYl1V3S5lNgloIlbZ7nmzVO', '1000 Laura Ville Lane', '', ''),
+('neilprabhu@gmail.com', 'neil2', '$2a$15$VQ9GScUd5CKFNx54C.9nGuBWkTuA9RRyI0aZhs.N/fuZskuNqFdly', '1000 Laura Ville Lane, San Jose, California 95125 ', '', ''),
+('dasdada', 'Sanjay', '$2a$15$1joUjxQZXGfja/Q0zx4JYuqgRNbGcjvxl54H6I8yTieutWrDB9w4u', '1000 China Gate', '', '');
 
 -- --------------------------------------------------------
 
@@ -160,15 +186,20 @@ CREATE TABLE `USER_CAMPS` (
   `Camp` varchar(255) NOT NULL,
   `Price` double NOT NULL,
   `duration` varchar(45) DEFAULT NULL,
-  `date` varchar(45) DEFAULT NULL
+  `date` varchar(45) NOT NULL,
+  `childName` varchar(45) NOT NULL,
+  `location` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `USER_CAMPS`
 --
 
-INSERT INTO `USER_CAMPS` (`Username`, `Camp`, `Price`, `duration`, `date`) VALUES
-('sanjay', 'Introduction to Web Programming', 499, '1 week', '07/03/17 - 07/10/17');
+INSERT INTO `USER_CAMPS` (`Username`, `Camp`, `Price`, `duration`, `date`, `childName`, `location`) VALUES
+('neil', 'Introduction to Web Programming', 499, '1 week', '06/19/17 - 06/26/17', 'Caleb', 'San Jose, CA'),
+('neil', 'Introduction to Web Programming', 499, '1 week', '06/19/17 - 06/26/17', 'Clark', 'San Jose, CA'),
+('neil2', 'Introduction to Python', 499, '1 week', '06/26/17 - 07/03/17', 'a', 'Santa Clara, CA'),
+('neil2', 'Introduction to Web Programming', 499, '1 week', '06/19/17 - 06/26/17', 'a', 'Los Angeles, CA');
 
 -- --------------------------------------------------------
 
@@ -183,21 +214,20 @@ CREATE TABLE `USER_ITEMS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `USER_ITEMS`
---
-
-INSERT INTO `USER_ITEMS` (`Username`, `item`, `Price`) VALUES
-('sanjay', 'Backpack', 30);
-
---
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `children`
+--
+ALTER TABLE `children`
+  ADD PRIMARY KEY (`username`,`childName`);
 
 --
 -- Indexes for table `courseTemp`
 --
 ALTER TABLE `courseTemp`
-  ADD PRIMARY KEY (`user`,`courseID`,`courseDate`);
+  ADD PRIMARY KEY (`user`,`courseName`,`childName`);
 
 --
 -- Indexes for table `FORUM`
@@ -210,6 +240,12 @@ ALTER TABLE `FORUM`
 --
 ALTER TABLE `users`
   ADD UNIQUE KEY `Username` (`Username`);
+
+--
+-- Indexes for table `USER_CAMPS`
+--
+ALTER TABLE `USER_CAMPS`
+  ADD PRIMARY KEY (`Username`,`Camp`,`date`,`childName`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
