@@ -67,6 +67,7 @@ session_start();
                 else
                 {
                   echo '<button><a href="login.php">Sign-In</a></button>';
+				  echo '<button><a href="createUser.php">Create Account</a></button>';
                 }
                ?>
             </div>
