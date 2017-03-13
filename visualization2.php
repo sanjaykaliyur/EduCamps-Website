@@ -16,6 +16,11 @@ include 'header.php';
   }
 </style>
 <head>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center><h2>Active Enrollment Statistics</h2></center>
 </head>
 <html>
   <body>
@@ -90,6 +95,18 @@ include 'header.php';
           }
         });
       </script>
+    </div>
+
+
+
+    <div class="col-md-6">
+        <img class="img-responsive" src="Images/Statistics/2016StatsCamp.png">
+        <img class="img-responsive" src="Images/Statistics/2016StatsLocation.png" style="height=150%;width=200%;">
+    </div>
+
+    <div class="col-md-6">
+        <img class="img-responsive" src="Images/Statistics/2015StatsCamp.png" style="height=150%;width=200%;">
+        <img class="img-responsive" src="Images/Statistics/2015StatsLocation.png" style="height=150%;width=200%;">
     </div>
 
   </body>
