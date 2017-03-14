@@ -13,7 +13,7 @@ if(isset($_SESSION['name'])) {
 <head>
   <style>
   .row {
-    padding-left: 20px;
+    padding-left: 40%;
   }
   </style>
 </head>
@@ -30,14 +30,14 @@ if(isset($_SESSION['name'])) {
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Username:</label>
-                            <input type="text" class="form-control" name="user" required data-validation-required-message="Please enter your username.">
+                            <input type="text" class="form-control" style="width: 30%;" name="user" required data-validation-required-message="Please enter your username.">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Password:</label>
-                            <input type="password" class="form-control" name="pass" required data-validation-required-message="Please enter your password">
+                            <input type="password" class="form-control" style="width: 30%;" name="pass" required data-validation-required-message="Please enter your password">
                         </div>
                     </div>
                     <div id="success"></div>

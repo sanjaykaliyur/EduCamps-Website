@@ -97,7 +97,7 @@
 		}
 	}
 	else{
-		echo '<script>location.href="login_fail2.php"</script>';
+		echo '<script>location.href="login_fail.php"</script>';
 	}
 }
 
