@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 13, 2017 at 09:18 PM
+-- Generation Time: Mar 14, 2017 at 07:15 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -100,15 +100,15 @@ CREATE TABLE `COURSES` (
 --
 
 INSERT INTO `COURSES` (`course_ID`, `course_name`, `cost`, `spots`, `image`, `description`, `date`) VALUES
-(1, 'Introduction to Web Programming', 499, 47, '', 'This camp covers basic HTML, CSS, and Javascript.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(2, 'Introduction to Python', 499, 49, '', 'This camp covers all the basic elements of Python.\r\n\r\n', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(3, 'Introduction to Java', 499, 50, '', 'This camp covers all the basic elements of Java.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(4, 'Introduction to Robotics', 699, 50, '', 'This introductory physics camp covers all the basics of Mechanics and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(5, 'Electrical Engineering: Circuits', 699, 50, '', 'This introductory chemistry camp covers all the basics of chemistry and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(6, 'Electrical Engineering: Logic Design', 699, 50, '', 'This introductory biology camp covers all the basics of the biological world and includes laboratory work. Safety equipment included in price.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(7, 'Basketball', 499, 50, '', 'This introductory geometry camp covers all the material covered in high school geometry courses.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(8, 'Football', 499, 50, '', 'This introductory algebra camp covers all the material covered in high school Algebra 1 and Algebra 2 courses.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
-(9, 'Swimming', 499, 50, '', 'This introductory calculus camp covers all the material covered in a standard high school Calculus AB course.', '8 wks. long (June 19, 2017 - August 18, 2017)');
+(1, 'Introduction to Web Programming', 499, 45, 'webprog.png', 'This camp covers basic HTML, CSS, and Javascript.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(2, 'Introduction to Python', 499, 49, 'python.png', 'This camp covers all the basic elements of Python.\r\n\r\n', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(3, 'Introduction to Java', 499, 50, 'java.png', 'This camp covers all the basic elements of Java.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(4, 'Introduction to Robotics', 699, 50, 'robot.png', 'This introductory robotics camp teaching students everything needed to know on basic robotics.', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(5, 'Electrical Engineering: Circuits', 699, 50, 'circuits.png', 'This introductory to EE in circuits is all about circuitry and perfecting the art of basic circuits!', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(6, 'Electrical Engineering: Logic Design', 699, 50, 'logic.png', 'What is logic? Binary number systems, Latches, flip flops, AND gates, OR gates, inverters etc. ', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(7, 'Basketball', 499, 50, 'basketball.png', 'Never played basketball? No problem. All age groups and experience levels welcome', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(8, 'Football', 499, 50, 'football.png', 'Never played Football? No problem. All age groups and experience levels welcome', '8 wks. long (June 19, 2017 - August 18, 2017)'),
+(9, 'Swimming', 499, 50, 'swimming.png', 'Never learned swimming? No problem. All age groups and experience levels welcome', '8 wks. long (June 19, 2017 - August 18, 2017)');
 
 -- --------------------------------------------------------
 
@@ -127,6 +127,16 @@ CREATE TABLE `courseTemp` (
   `location` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `courseTemp`
+--
+
+INSERT INTO `courseTemp` (`user`, `courseID`, `courseName`, `courseDuration`, `courseCost`, `courseDate`, `childName`, `location`) VALUES
+('neil', 3, 'Introduction to Java', '1 week', 499, '07/10/17 - 07/17/17', 'Thomas', 'Boston, MA'),
+('neil', 1, 'Introduction to Web Programming', '1 week', 499, '06/26/17 - 07/03/17', 'Clark', 'Los Angeles, CA'),
+('neil', 1, 'Introduction to Web Programming', '2 weeks', 998, '07/17/17 - 07/31/17', 'Jordan', 'Austin, TX'),
+('neil', 1, 'Introduction to Web Programming', '2 weeks', 998, '06/19/17 - 07/03/17', 'Michael', 'Boulder, CO');
+
 -- --------------------------------------------------------
 
 --
@@ -140,6 +150,13 @@ CREATE TABLE `FORUM` (
   `campName` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `FORUM`
+--
+
+INSERT INTO `FORUM` (`Username`, `entryDate`, `response`, `campName`) VALUES
+('neil', '2017-03-14', 'Just signed up Caleb and Clark for this camp!\r\nThey are stoked as they loved it last year!', 'Introduction to Web Programming');
+
 -- --------------------------------------------------------
 
 --
@@ -150,6 +167,13 @@ CREATE TABLE `userPics` (
   `Username` varchar(45) DEFAULT NULL,
   `image` varchar(135) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userPics`
+--
+
+INSERT INTO `userPics` (`Username`, `image`) VALUES
+('neil', './Images/Uploads/1.jpg');
 
 -- --------------------------------------------------------
 
@@ -171,7 +195,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Email`, `Username`, `Password`, `Address`, `courses_cart`, `items_cart`) VALUES
-('neil@gmail.com', 'neil', '$2a$15$AognyjTjCORj3hgykJ0yr.PO57i7BXuYl1V3S5lNgloIlbZ7nmzVO', '1000 Laura Ville Lane', '', ''),
+('neil@gmail.com', 'neil', '$2a$15$AognyjTjCORj3hgykJ0yr.PO57i7BXuYl1V3S5lNgloIlbZ7nmzVO', '1000 Laura Ville Lane', '1113', '1'),
 ('neilprabhu@gmail.com', 'neil2', '$2a$15$VQ9GScUd5CKFNx54C.9nGuBWkTuA9RRyI0aZhs.N/fuZskuNqFdly', '1000 Laura Ville Lane, San Jose, California 95125 ', '', ''),
 ('dasdada', 'Sanjay', '$2a$15$1joUjxQZXGfja/Q0zx4JYuqgRNbGcjvxl54H6I8yTieutWrDB9w4u', '1000 China Gate', '', '');
 
@@ -198,6 +222,8 @@ CREATE TABLE `USER_CAMPS` (
 INSERT INTO `USER_CAMPS` (`Username`, `Camp`, `Price`, `duration`, `date`, `childName`, `location`) VALUES
 ('neil', 'Introduction to Web Programming', 499, '1 week', '06/19/17 - 06/26/17', 'Caleb', 'San Jose, CA'),
 ('neil', 'Introduction to Web Programming', 499, '1 week', '06/19/17 - 06/26/17', 'Clark', 'San Jose, CA'),
+('neil', 'Introduction to Web Programming', 998, '2 weeks', '06/19/17 - 07/03/17', 'Caleb', 'Santa Clara, CA'),
+('neil', 'Introduction to Web Programming', 499, '1 week', '07/03/17 - 07/10/17', 'Clark', 'Los Angeles, CA'),
 ('neil2', 'Introduction to Python', 499, '1 week', '06/26/17 - 07/03/17', 'a', 'Santa Clara, CA'),
 ('neil2', 'Introduction to Web Programming', 499, '1 week', '06/19/17 - 06/26/17', 'a', 'Los Angeles, CA');
 

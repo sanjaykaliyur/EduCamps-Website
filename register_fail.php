@@ -60,7 +60,7 @@ crossorigin="anonymous"></script>
    <div class="container">
      <div class="row">
        <br><br><br>
-        <p>Invalid request. Try again.</p>
+        <h1>Invalid request. Try again.</h1>
          <div class="col-lg-12">
              <h1 class="page-header" style="padding-top: 10px;">Camps
                  <small>EduCamps Programs</small>
@@ -88,7 +88,7 @@ crossorigin="anonymous"></script>
        echo ' <div class="row">
                <div class="col-md-5">
                    <center><a>
-                       <img class="img-responsive img-hover" src="http://static.kinfosystem.com/images/slider/web-program.png" style="height:300px;widht:400px;" alt="">
+                       <img class="img-responsive img-hover" src="./Images/Course/'.$row['image'].'" style="height:300px;widht:400px;" alt="">
                    </a></center>
                </div>';
                echo'

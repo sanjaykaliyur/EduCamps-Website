@@ -20,10 +20,11 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
     $cost = $cost * 2;
   }
   $sql0 = "INSERT INTO `courseTemp`(`user`, `courseID`, `courseName`, `courseDuration`, `courseCost`, `courseDate`, `childName`,`location`) VALUES ('$id','$courseID','$course','$duration', '$cost','$date','$child','$location')";
-  if($result0 = mysqli_query($conn,$sql0)) {
-    echo "worked";
+  if(!($result0 = mysqli_query($conn,$sql0))) {
+    echo '<script>location.href="register_fail.php"</script>';
   }
-
+  else
+  {
   $sql = "SELECT courses_cart FROM USERS WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($result);
@@ -32,6 +33,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
 
   $sql = "UPDATE USERS SET courses_cart = '$cart_courses' WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
+  }
 
 }else if(isset($_POST['item_name']) && isset($_POST['item_cost']) && isset($_POST['item_ID'])) {
   $item_name = $_POST['item_name'];
@@ -122,27 +124,34 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
 
                 //get Child names
                 foreach($array as $i => $item) {
-                  $sqlx = "SELECT childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
+                  $sqlx = "SELECT childName FROM courseTemp WHERE user = '$id';";
                   $resultx = mysqli_query($conn,$sqlx);
                   $childs = array();
                   while ($rowx = mysqli_fetch_assoc($resultx)) {
                     array_push($childs, $rowx['childName']);
                   }
                 }
-
+                //print_r($childs);
+              //  print_r($array);
+                $rev = array_reverse($childs);
                 if(!($array[0] == "")) {
                   $bool = true;
                   foreach($array as $i => $item) {
-                    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id' AND childName = '$childs[$i]';";
+                    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id' AND childName = '$rev[$i]';";
+                    //echo $sql2;
+                    $sqlA = "SELECT image FROM COURSES WHERE course_ID = '$array[$i]'";
+                    $resultA = mysqli_query($conn,$sqlA);
+                    $rowA = mysqli_fetch_assoc($resultA);
                     $result2 = mysqli_query($conn,$sql2);
                     while($row2 = mysqli_fetch_assoc($result2)){
                       $rows2[] = $row2;
                       $totalCost += $row2['courseCost'];
                     }
+
                   foreach($rows2 as $row4) {
                     echo'
           					<div class="row">
-          						<div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+          						<div class="col-xs-2"><img class="img-responsive" src="./Images/Course/'.$rowA['image'].'">
           						</div>
           						<div class="col-xs-4">
           							<h4 class="product-name"><strong></strong></h4><h4><small>'.$row4['courseName'].'</small></h4>
@@ -160,6 +169,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                             <input type="hidden" name="courseID" value="'.$array[$i].'"></input>
                             <input type="hidden" name= "courseCost"  value = "'.$row4['courseCost'].'"></input>
                             <input type="hidden" name= "courseDuration"  value = "'.$row4['courseDuration'].'"></input>
+                            <input type="hidden" name = "childName" value = "'.$row4['childName'].'"></input>
             								<button type="submit" class="btn btn-link btn-xs">
             									<span class="glyphicon glyphicon-trash"> </span>
             								</button>
@@ -233,9 +243,14 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                       $row = mysqli_fetch_assoc($res);
                       $child = $row['childName'];
                       $sqlx = "SELECT COUNT(*) FROM USER_CAMPS WHERE Username = '$id' AND childName != '$child';";
+                      $sqlz = "SELECT COUNT(*) FROM USER_CAMPS WHERE Username = '$id';";
+
                       $res = mysqli_query($conn,$sqlx);
                       $row = mysqli_fetch_assoc($res);
-                      if( $row['COUNT(*)'] > 1) {
+                      $resz = mysqli_query($conn,$sqlz);
+                      $rowz = mysqli_fetch_assoc($resz);
+
+                      if( $row['COUNT(*)'] > 1 || $rowz['COUNT(*)'] > 1) {
         								echo '<h6 class="text-right">discount: - $'.floor((0.10*$totalCost)).'.00</h6>';
                       }
                         echo '
@@ -261,7 +276,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                     $res = mysqli_query($conn,$sqlx);
                     $row = mysqli_fetch_assoc($res);
 
-                    if( $row['COUNT(*)'] > 1) {
+                    if( $row['COUNT(*)'] > 1 || $rowz['COUNT(*)'] > 1) {
                       $totalCost = $totalCost - $discount2;
                     }
                     echo'

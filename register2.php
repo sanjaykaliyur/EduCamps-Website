@@ -86,7 +86,7 @@ crossorigin="anonymous"></script>
        echo ' <div class="row">
                <div class="col-md-5">
                    <center><a>
-                       <img class="img-responsive img-hover" src="http://static.kinfosystem.com/images/slider/web-program.png" style="height:300px;widht:400px;" alt="">
+                       <img class="img-responsive img-hover" src="./Images/Course/'.$row['image'].'" style="height:300px;widht:400px;" alt="">
                    </a></center>
                </div>';
                echo'
