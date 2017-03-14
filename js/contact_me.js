@@ -1,6 +1,6 @@
 /*
   Jquery Validation using jqBootstrapValidation
-   example is taken from jqBootstrapValidation docs 
+   example is taken from jqBootstrapValidation docs
   */
 $(function() {
 
@@ -23,7 +23,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "./bin/contact_me.php",
+                url: "contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
