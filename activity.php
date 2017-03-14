@@ -2,17 +2,9 @@
 
 <html>
   <head>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br><br><br>
     <h2> Games Our Campers Have Built </h2>
-    <br>
-    <br>
+    <br><br>
     <link rel="stylesheet" href="Games/style.css" type="text/css">
     <script src="Games/jquery.min.js"></script>
     <script src="Games/sugar-1.2.5.min.js"></script>
@@ -20,13 +12,11 @@
     <br><br><br><br>
     <script type="text/javascript" src="Games/pong.js"></script>
     <br><br><br><br><br><br><br><br>
-    <h3>Exhibit B: Tic-Taco-Toe</h3>
+    <h3>Exhibit B: Tic-Tac-Toe</h3>
     <script type="text/javascript" src="Games/tic.js"></script>
   </head>
   <body class="theme-01">
-
     <div id="game-container"></div>
-
     <script type="text/x-template" id="game-template">
     <div id="menu-container">
       <br><br><br><br>
