@@ -117,7 +117,7 @@ $max_file_size = 3000000; // size in bytes
             </p>
             <p>
                 <label for="file">Select your image (.JPG & .PNG only)</label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload" required data-validation-required-message="No Photo Attached!">
             <p>
                 <input type="submit" value="Upload Image" name="submit">
             </p>

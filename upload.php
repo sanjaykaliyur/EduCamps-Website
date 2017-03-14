@@ -1,5 +1,9 @@
 <?php
 include "header.php";
+/*if(!isset($_POST['fileToUpload']))
+{
+
+}*/
 echo '<br><br><br><br><br><br>';
 $target_dir = "./Images/Uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
