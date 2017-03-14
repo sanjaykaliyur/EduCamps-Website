@@ -3,7 +3,7 @@ include "header.php";
 echo '<br><br><br><br><br><br>';
 $target_dir = "./Images/Uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-echo $target_file;
+//echo $target_file;
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
