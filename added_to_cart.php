@@ -20,7 +20,9 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
     $cost = $cost * 2;
   }
   $sql0 = "INSERT INTO `courseTemp`(`user`, `courseID`, `courseName`, `courseDuration`, `courseCost`, `courseDate`, `childName`,`location`) VALUES ('$id','$courseID','$course','$duration', '$cost','$date','$child','$location')";
-  $result0 = mysqli_query($conn,$sql0);
+  if($result0 = mysqli_query($conn,$sql0)) {
+    echo "worked";
+  }
 
   $sql = "SELECT courses_cart FROM USERS WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
@@ -58,6 +60,10 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
    <style>
    body {margin-top: 20px;}
    #discounts {color: #5cb85c;}
+
+   #emptyShop {text-align: center;}
+   #continueShop {float: right;}
+   #continueShop2 {float: right;}
    </style>
  </head>
  <body>
@@ -81,7 +87,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
          </ul>
         </div><br><br><br>';
    if($array[0] == "" && $array2[0] == ""){
-    echo '<h1 style="text-align: center;"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
+    echo '<h1 id="emptyShop"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
    }
    else {
    echo '<div class="container" style="width: 150%;">
@@ -113,10 +119,21 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
         				</div>
         				<div class="panel-body">';
                 //courses
+
+                //get Child names
+                foreach($array as $i => $item) {
+                  $sqlx = "SELECT childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
+                  $resultx = mysqli_query($conn,$sqlx);
+                  $childs = array();
+                  while ($rowx = mysqli_fetch_assoc($resultx)) {
+                    array_push($childs, $rowx['childName']);
+                  }
+                }
+
                 if(!($array[0] == "")) {
                   $bool = true;
                   foreach($array as $i => $item) {
-                    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id';";
+                    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id' AND childName = '$childs[$i]';";
                     $result2 = mysqli_query($conn,$sql2);
                     while($row2 = mysqli_fetch_assoc($result2)){
                       $rows2[] = $row2;
@@ -243,6 +260,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                     $sqlx = "SELECT COUNT(*) FROM USER_CAMPS WHERE Username = '$id' AND childName != '$child';";
                     $res = mysqli_query($conn,$sqlx);
                     $row = mysqli_fetch_assoc($res);
+
                     if( $row['COUNT(*)'] > 1) {
                       $totalCost = $totalCost - $discount2;
                     }
