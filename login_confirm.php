@@ -17,7 +17,7 @@
         <!-- Content Row -->
         <div class="row">
             <center><div class="col-lg-12">
-                <p>You may now <a href="register.php">register your child for camps</a> or <a href="catalog.php">purchase items in the catalog</a>. To return to the home page, click <a href="index.php">here</a>.</p>
+                <p>You may now <a href="register2.php">register your child for camps</a> or <a href="catalog2.php">purchase items in the catalog</a>. To return to the home page, click <a href="index.php">here</a>.</p>
             </div></center>
         </div>
         <hr>
