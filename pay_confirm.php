@@ -15,7 +15,7 @@
         <!-- /.row -->
         <h3> Bought: </h3>
         <?php
-        $sql = "SELECT courses_cart, items_cart FROM USERS WHERE Username = '$id';";
+        $sql = "SELECT courses_cart, items_cart FROM users WHERE Username = '$id';";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_assoc($result);
         $items_cart = $row['items_cart'];
@@ -78,7 +78,7 @@
             $i++;
           }
         }
-        $sql7 = "UPDATE USERS SET courses_cart = '', items_cart = '' WHERE Username = '$id';";
+        $sql7 = "UPDATE users SET courses_cart = '', items_cart = '' WHERE Username = '$id';";
         $result7 = mysqli_query($conn,$sql7);
         if(!$bool && !$bool2)
         {

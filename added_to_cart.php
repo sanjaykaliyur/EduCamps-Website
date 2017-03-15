@@ -3,7 +3,7 @@
  if(!isset($_SESSION['id'])) {
      $message = "You must be logged in!";
      echo "<script type='text/javascript'>alert('$message');</script>";
-     header('Location: register2.php');
+     header('Location: login.php');
  }
 
 if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']) && isset($_POST['courseID']) && isset($_POST['duration']) && isset($_POST['date'])) {
@@ -25,13 +25,13 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
   }
   else
   {
-  $sql = "SELECT courses_cart FROM USERS WHERE Username = '$id';";
+  $sql = "SELECT courses_cart FROM users WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($result);
 
   $cart_courses = $row['courses_cart'].$courseID;
 
-  $sql = "UPDATE USERS SET courses_cart = '$cart_courses' WHERE Username = '$id';";
+  $sql = "UPDATE users SET courses_cart = '$cart_courses' WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
   }
 
@@ -41,13 +41,13 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
   $item_cost = $_POST['item_cost'];
 
 
-  $sql = "SELECT items_cart FROM USERS WHERE Username = '$id';";
+  $sql = "SELECT items_cart FROM users WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($result);
 
   $cart_items = $row['items_cart'].$item_ID;
 
-  $sql = "UPDATE USERS SET items_cart = '$cart_items' WHERE Username = '$id';";
+  $sql = "UPDATE users SET items_cart = '$cart_items' WHERE Username = '$id';";
   $result = mysqli_query($conn,$sql);
 }
 ?>
@@ -71,10 +71,9 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
  <body>
    <br>
    <br>
-   <br>
    <?php
 
-   $sql = "SELECT courses_cart, items_cart FROM USERS WHERE Username = '$id';";
+   $sql = "SELECT courses_cart, items_cart FROM users WHERE Username = '$id';";
    $result = mysqli_query($conn,$sql);
    $row = mysqli_fetch_assoc($result);
    $array = str_split($row['courses_cart']);
@@ -85,14 +84,19 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
    echo '<div id="discounts">
           <ul><b>Discounts:</b>
            <li>If you have more than 1 child registered you get a 10% discount!</li>
-           <li>If you already registered and wish to buy a catalog item you get a 15% discount!</li>
+           <li>If you already registered or add a camp to cart and wish to buy a catalog item you get a 15% discount!</li>
          </ul>
-        </div><br><br><br>';
-   if($array[0] == "" && $array2[0] == ""){
-    echo '<h1 id="emptyShop"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
-   }
-   else {
-   echo '<div class="container" style="width: 150%;">
+        </div><br>';
+//	echo "Course Cart: ".$row['courses_cart'];
+//	echo "Item Cart: ".$row['items_cart'];
+	if(($array[0] == "" && $array2[0] == "")){
+    		echo '<h1 id="emptyShop"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
+   	}
+	else if($row['courses_cart'] == "" && $row['items_cart'] == "") {
+		 echo '<h1 id="emptyShop"><span class="glyphicon glyphicon-shopping-cart"></span> Empty Shopping Cart!</h1>';
+	}
+   	else {
+   		echo '<div class="container" style="width: 150%;">
         	<div class="row">
         		<div class="col-xs-8">
         			<div class="panel panel-info">
@@ -122,7 +126,7 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
         				<div class="panel-body">';
                 //courses
 
-                //get Child names
+                /*get Child names
                 foreach($array as $i => $item) {
                   $sqlx = "SELECT childName FROM courseTemp WHERE user = '$id';";
                   $resultx = mysqli_query($conn,$sqlx);
@@ -130,16 +134,21 @@ if(isset($_POST['courseName']) && isset($_POST['cost']) && isset($_POST['spots']
                   while ($rowx = mysqli_fetch_assoc($resultx)) {
                     array_push($childs, $rowx['childName']);
                   }
-                }
-                //print_r($childs);
-              //  print_r($array);
-                $rev = array_reverse($childs);
-                if(!($array[0] == "")) {
+                }*/
+               // print_r($childs);
+               // print_r($array);
+               // $rev = array_reverse($childs);
+               // print_r($rev);
+		if(!($array[0] == "")) {
                   $bool = true;
                   foreach($array as $i => $item) {
-                    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id' AND childName = '$rev[$i]';";
-                    //echo $sql2;
-                    $sqlA = "SELECT image FROM COURSES WHERE course_ID = '$array[$i]'";
+		    $sqlx = "SELECT childName FROM courseTemp WHERE user = '$id' AND courseID = '$array[$i]';";
+                    $resultx = mysqli_query($conn,$sqlx);
+		    $rev = mysqli_fetch_assoc($resultx);
+                    $c = $rev['childName'];
+		    $sql2 = "SELECT courseName, courseDuration, courseCost, childName FROM courseTemp WHERE courseID = '$array[$i]' AND user = '$id' AND childName = '$c';";
+                   // echo $sql2."           ";
+                    $sqlA = "SELECT image FROM COURSES WHERE course_ID = '$array[$i]';";
                     $resultA = mysqli_query($conn,$sqlA);
                     $rowA = mysqli_fetch_assoc($resultA);
                     $result2 = mysqli_query($conn,$sql2);
