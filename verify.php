@@ -62,7 +62,7 @@
     $bcrypt = new Bcrypt(15);
     $hash = $bcrypt->hash($password);
 
-     $sql = "INSERT INTO USERS (`Email`, `Username`, `Password`, `Address`) VALUES('$parentEmail','$username','$hash','$address')";
+     $sql = "INSERT INTO users (`Email`, `Username`, `Password`, `Address`) VALUES('$parentEmail','$username','$hash','$address')";
      $result = mysqli_query($conn,$sql);
      if($result){
          echo "<script> location.href='login.php';</script>";
@@ -74,13 +74,13 @@
   if(isset($_POST['user']) && isset($_POST['pass'])) {
     $dbservername = "localhost";
     $dbusername = "root";
-    $dbpassword = "";
+    $dbpassword = "toor";
     $dbname = "EduCamps";
     $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 
     $username = $_POST['user'];
     $password = $_POST['pass'];
-	  $sql = "SELECT * FROM USERS WHERE Username = '$username';";
+	  $sql = "SELECT * FROM users WHERE Username = '$username';";
   	$result = mysqli_query($conn,$sql);
     $count = mysqli_num_rows($result);
 

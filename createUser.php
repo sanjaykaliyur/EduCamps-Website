@@ -1,5 +1,5 @@
 <?php
-  include 'header.php'
+  include 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,9 @@
     });
   });
   </script>
+  <style>
+	.wrapper {display: inline;}
+  </style>
 </head>
 <body>
   <br>
@@ -44,7 +47,9 @@
     <label for="field1"><span>Password<span class="required">*</span></span><input name = "password" type = "password" required data-validation-required-message="Password is required."/></label>
     <br>
     <br>
-    <h4>Please add as many children then type their names</h4>
+    <div class = "wrapper">
+    	<h4><b style="color: red;">*Add</b> as many children then type their names</h4>
+    </div>
     <label for="field1"><span>Child 1 Name: <span class="required"></span></span><input name ="childName1"/></label>
     <input type="hidden" name="childName" id="TextBox" value="1" />
     <input type="Button" id='AddButton' value="+" />
@@ -67,7 +72,7 @@
     <!--label for="field2"><span>Date of Birth<span class="required">*</span></span><input id = "childDOB" type="date" class="input-field" name="field2" value="" required data-validation-required-message="Date Of Birth Required" /></label>
     <br>
     <br-->
-    <label for="field1"><span>Parent name<span class="required">*</span></span><input id = "parentName"type="text" class="input-field" name="field1" value="" required data-validation-required-message="Parent Name Required." /></label>
+    <label for="field1"><span>Parent name<span class="required">*</span></span><input id = "parentName"type="text" class="input-field" name="field1" value="" required data-validation-required-message="Parent Name Required."/></label>
     <br>
     <br>
     <label for="field1"><span>Parent's Email<span class="required">*</span></span><input name = "parentEmail" type="text" class="input-field" name="field1" value="" maxlength="44" required data-validation-required-message="Parent Email Required." /></label>

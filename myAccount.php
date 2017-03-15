@@ -20,7 +20,8 @@ echo '<div id="accountWrapper" style="padding-left: 10px;">';
     echo '<hr><p><h2>'.$row['Camp'].'</h2></p>';
     echo '<p><b>Child:</b> '.$row['childName'].'</p>';
     echo '<p><b>Duration:</b> '.$row['duration'].'</p>';
-    echo '<p><b>Date Period:</b> '.$row['date'].'</p><hr>';
+    echo '<p><b>Date Period:</b> '.$row['date'].'</p>';
+    echo '<p><b>Location: </b> '.$row['location'].'</p><hr>';
   }
   echo '<br>
         <h3> My items:</h3>';
