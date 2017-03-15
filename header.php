@@ -54,7 +54,7 @@ session_start();
             <div id="userCntrl">
               <?php
                 if(isset($_SESSION['id'])){
-                  $sql = "select * FROM users WHERE `Username` ='$id'";
+                  $sql = "select * FROM USERS WHERE `Username` ='$id'";
                   $result = mysqli_query($conn,$sql);
                   $row = mysqli_fetch_assoc($result);
                   echo '<div class="dropdown">

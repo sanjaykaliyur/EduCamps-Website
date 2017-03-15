@@ -1,7 +1,7 @@
 <?php
    	$dbservername = "localhost";
     $dbusername = "root";
-    $dbpassword = "toor";
+    $dbpassword = "";
     $dbname = "EduCamps";
     $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
     // Database Names:

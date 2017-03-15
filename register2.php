@@ -55,9 +55,6 @@ crossorigin="anonymous"></script>
  .sameLine {
    display: inline;
  }
-.warning {
-	color: red;
-}
  </style>
  <body>
    <div class="container">
@@ -65,17 +62,14 @@ crossorigin="anonymous"></script>
          <div class="col-lg-12">
              <h1 class="page-header" style="padding-top: 10px;">Camps
                  <small>EduCamps Programs</small>
-		</h1>
+             </h1>
          </div>
      </div>
      <?php
-     if(!(isset($_SESSION['id']))) {
-	echo '<h4 class="warning">*must be logged in to add to cart</h4>';
-     }
      $sql = "SELECT * FROM COURSES;";
      $result = mysqli_query($conn,$sql);
      $counter = 0;
-     //'.$counter.'
+//'.$counter.'
      while($row = mysqli_fetch_assoc($result)) {
        if($counter == 0)
        {
@@ -170,5 +164,5 @@ crossorigin="anonymous"></script>
  </body>
  </html>
  <?php
- //include 'footer.php'
+ include 'footer.php'
  ?>

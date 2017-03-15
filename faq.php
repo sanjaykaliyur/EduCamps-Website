@@ -27,7 +27,7 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse">
                             <div class="panel-body">
-                                All our camps occur within June 19, 2017 and August 18, 2017. For specific dates, visit the <a href="register2.php">Registration</a> page.
+                                All our camps occur within June 19, 2017 and August 18, 2017. For specific dates, visit the <a href="register.php">Registration</a> page.
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
-                                Camps are located in a variety of locations spanning 20 states across the United States. Not all camps are offered in all locations. See the <a href="register2.php">Registration</a> page for more informtion.
+                                Camps are located in a variety of locations spanning 20 states across the United States. Not all camps are offered in all locations. See the <a href="register.php">Registration</a> page for more informtion.
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse">
                             <div class="panel-body">
-                                Our camps can accomodate children between the ages of 8 and 14. Certain camps may have additional age restrictions. Age levels can be seen when <a href="register2.php">registering</a> for camps.
+                                Our camps can accomodate children between the ages of 8 and 14. Certain camps may have additional age restrictions. Age levels can be seen when <a href="register.php">registering</a> for camps.
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                         </div>
                         <div id="collapseSix" class="panel-collapse collapse">
                             <div class="panel-body">
-                                We take allergies very seriously at Educamps, and will request you list any allergies when <a href="register2.php">registering</a> for camp. We will then consider our campers' allergies when choosing snacks for a given session.
+                                We take allergies very seriously at Educamps, and will request you list any allergies when <a href="register.php">registering</a> for camp. We will then consider our campers' allergies when choosing snacks for a given session.
                             </div>
                         </div>
                     </div>

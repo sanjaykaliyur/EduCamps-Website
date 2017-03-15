@@ -34,7 +34,7 @@
              <h1 >Catalog
                  <small>Purchase EduCamps Gear</small>
              </h1>
-             <p>*Note: If you have registered or are registering your child for camp, you will receive a 15% discount on all merchandise purchased in this catalaog (Discount applied during checkout)</p>
+             <p>*Note: If you have registered your child for camp, you will receive a 15% discount on all merchandise purchased in this catalaog (Discount applied during checkout)</p>
          </div>
      </div>
      <!-- /.row -->
